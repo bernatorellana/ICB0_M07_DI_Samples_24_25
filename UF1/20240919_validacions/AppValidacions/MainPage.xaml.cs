@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -10,6 +11,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.System;
 using Windows.UI;
+using Windows.UI.Core;
 using Windows.UI.ViewManagement.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -18,6 +20,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using static System.Net.Mime.MediaTypeNames;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
 
@@ -83,14 +86,22 @@ namespace AppValidacions
 
         [DllImport("user32.dll", SetLastError = true)]
         static extern int MapVirtualKey(int uCode, uint uMapType);
+
+
         private void txbAlcada_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
         {
-
+            // Mirem si el shift està apretat (crida simpàtica al code de Windows)
+            bool shiftApretat = Window.Current.CoreWindow.GetKeyState(VirtualKey.Shift).HasFlag(CoreVirtualKeyStates.Down);
+            
+            // Convertim el codi de tecla a un caràcter per a que sigui més fàcil de gestionar
             char c = (char)MapVirtualKey((int)e.Key, (uint)2);
+            //bool isNumber = (e.Key >= VirtualKey.Number0 && e.Key <= VirtualKey.Number9);
 
-            //e.OriginalKey == Windows.System.VirtualKey.Number0
-            e.Handled = !(e.OriginalKey == Windows.System.VirtualKey.Number0);
-            //e.Handled= true; // true intercepta la tecla
+            e.Handled =  !(  
+                        (c==',' && !txbAlcada.Text.Contains(",") ) ||  // Acceptem una coma si és la primera.
+                        e.Key ==VirtualKey.Back ||                     // Acceptem esborrar (back).
+                        (Char.IsNumber(c)&& !shiftApretat)              // Acceptem tecles numèriques si no està el shift apretat.
+                    ); // true intercepta la tecla
         }
 
         private void txbDataNaix_LostFocus(object sender, RoutedEventArgs e)
@@ -110,6 +121,25 @@ namespace AppValidacions
                 cboMes.SelectedValue = data.ToString("MMMM");
                 cboAny.SelectedValue = data.Year;
             }
+        }
+
+        private void txbDataNaix_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            
+            // Mirem si el shift està apretat (crida simpàtica al code de Windows)
+            bool shiftApretat = Window.Current.CoreWindow.GetKeyState(VirtualKey.Shift).HasFlag(CoreVirtualKeyStates.Down);
+
+            // Convertim el codi de tecla a un caràcter per a que sigui més fàcil de gestionar
+            char c = (char)MapVirtualKey((int)e.Key, (uint)2);
+            //bool isNumber = (e.Key >= VirtualKey.Number0 && e.Key <= VirtualKey.Number9);
+
+            int numBarres = txbDataNaix.Text.Count(ch => ch == '/');
+            
+                e.Handled = !(
+                        ((c == '/'|| c=='7'&&shiftApretat ) && numBarres<2) ||  // Acceptem una coma si és la primera.
+                        e.Key == VirtualKey.Back ||                     // Acceptem esborrar (back).
+                        (Char.IsNumber(c) && !shiftApretat)              // Acceptem tecles numèriques si no està el shift apretat.
+                    ); // true intercepta la tecla
         }
     }
     }

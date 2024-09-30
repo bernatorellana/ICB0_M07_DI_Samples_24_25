@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\easeus\\Recovered\\SchoolDriver(E)\\Existing Files\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\24_25\\20240919_validacions\\AppValidacions\\AppValidacions.csproj": {}
+    "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj": {}
   },
   "projects": {
-    "C:\\easeus\\Recovered\\SchoolDriver(E)\\Existing Files\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\24_25\\20240919_validacions\\AppValidacions\\AppValidacions.csproj": {
+    "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\easeus\\Recovered\\SchoolDriver(E)\\Existing Files\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\24_25\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
+        "projectUniqueName": "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
         "projectName": "AppValidacions",
-        "projectPath": "C:\\easeus\\Recovered\\SchoolDriver(E)\\Existing Files\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\24_25\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
+        "projectPath": "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
         "packagesPath": "C:\\Users\\Usuari\\.nuget\\packages\\",
-        "outputPath": "C:\\easeus\\Recovered\\SchoolDriver(E)\\Existing Files\\Docencia\\Material_Moduls\\M7_DI\\repoGit\\24_25\\20240919_validacions\\AppValidacions\\obj\\",
+        "outputPath": "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

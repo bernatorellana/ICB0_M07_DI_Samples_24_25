@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d4263907-98bc-4b53-a6c8-b084a90dd2e4</PackageIdentityName>
     <PackageIdentityPublisher>CN=Usuari</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>91B8E8053C7CDCD294878CBAD5B1A672954EE751F4093ACA8D976FEC52290542</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d4263907-98bc-4b53-a6c8-b084a90dd2e4_1.0.0.0_x86__n82rqfc3nm07y</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d4263907-98bc-4b53-a6c8-b084a90dd2e4_n82rqfc3nm07y!App</RegisteredUserModeAppID>
@@ -27,82 +27,82 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-09-23T17:34:22.071</Modified>
+      <Modified>2024-09-30T17:27:39.369</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\AppValidacions.exe">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\AppValidacions.exe">
       <PackagePath>entrypoint\AppValidacions.exe</PackagePath>
-      <Modified>2024-09-23T17:34:21.808</Modified>
+      <Modified>2024-09-30T17:27:38.630</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2022-06-10T20:24:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2024-09-19T16:30:57.200</Modified>
+      <Modified>2024-09-30T16:40:50.273</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2023-06-26T05:01:36.680</Modified>
+      <Modified>2024-09-30T16:40:50.269</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-26T05:01:36.681</Modified>
+      <Modified>2024-09-30T16:40:50.270</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-26T05:01:36.681</Modified>
+      <Modified>2024-09-30T16:40:50.270</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-26T05:01:36.681</Modified>
+      <Modified>2024-09-30T16:40:50.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-26T05:01:36.681</Modified>
+      <Modified>2024-09-30T16:40:50.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-26T05:01:36.681</Modified>
+      <Modified>2024-09-30T16:40:50.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-06-26T05:01:36.682</Modified>
+      <Modified>2024-09-30T16:40:50.272</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\AppValidacions.xr.xml">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\AppValidacions.xr.xml">
       <PackagePath>AppValidacions.xr.xml</PackagePath>
-      <Modified>2024-09-23T17:32:25.564</Modified>
+      <Modified>2024-09-30T16:40:50.352</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2024-09-23T17:34:21.773</Modified>
+      <Modified>2024-09-30T17:27:38.507</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2024-09-23T17:34:21.773</Modified>
+      <Modified>2024-09-30T17:27:38.507</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-19T20:01:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-09-23T17:25:38.784</Modified>
+      <Modified>2024-09-30T16:41:59.363</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\easeus\Recovered\SchoolDriver%28E%29\Existing Files\Docencia\Material_Moduls\M7_DI\repoGit\24_25\20240919_validacions\AppValidacions\bin\x86\Debug\Core\AppValidacions.exe">
+    <AppxPackagedFile Include="C:\temp\ICB0_M07_DI_Samples_24_25\UF1\20240919_validacions\AppValidacions\bin\x86\Debug\Core\AppValidacions.exe">
       <PackagePath>AppValidacions.exe</PackagePath>
-      <Modified>2024-09-23T17:34:22.069</Modified>
+      <Modified>2024-09-30T17:27:39.364</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

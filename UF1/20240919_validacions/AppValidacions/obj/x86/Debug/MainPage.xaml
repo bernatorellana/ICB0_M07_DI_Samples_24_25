@@ -29,7 +29,7 @@
         <TextBlock x:ConnectionId='4'  x:Name="txtAlcadaErrMsg" VerticalAlignment="Center" Grid.Column="3" Grid.Row="0" >Alçada errònia</TextBlock>
         <!-- ***************************************-->
         <TextBlock VerticalAlignment="Center" Grid.Column="0" Grid.Row="1" FontWeight="Bold" >Data de naixement:</TextBlock>
-        <TextBox x:ConnectionId='5'                                    x:Name="txbDataNaix" PlaceholderText="dd/mm/yyyy"  Grid.Column="1" Grid.Row="1" ></TextBox>
+        <TextBox x:ConnectionId='5'                                                                                x:Name="txbDataNaix" PlaceholderText="dd/mm/yyyy"  Grid.Column="1" Grid.Row="1" ></TextBox>
         <TextBlock x:ConnectionId='6' x:Name="txtDataNaixIcon" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" FontFamily="Segoe MDL2 Assets" Foreground="Green">&#xE711;&#xE8FB;</TextBlock>
         <TextBlock x:ConnectionId='7' x:Name="txbDataNaixErrMsg" VerticalAlignment="Center" Grid.Column="3" Grid.Row="1" >Data errònia</TextBlock>
         <!-- ***************************************-->
