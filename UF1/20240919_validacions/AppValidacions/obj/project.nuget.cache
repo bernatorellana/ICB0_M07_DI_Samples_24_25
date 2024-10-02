@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OmNbMevLgZTb+YVVCk1K8Myr+TnXLYb082hBMWfOmoXbXXcAHNViLWFt1dmcLEyTsGM+5xks8/4Z2f9YLnyA7w==",
+  "dgSpecHash": "avIgmGeNc+f+AEHEnmxnOPcPaUn25G8qCKFWRvxOzWBJ+hFIDNIovAcdvlXDksClWYijhop0QHw/J09luZNT8A==",
   "success": true,
-  "projectFilePath": "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
+  "projectFilePath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\2.2.12-rel-31116-00\\microsoft.net.native.compiler.2.2.12-rel-31116-00.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.uwpcoreruntimesdk\\2.2.14\\microsoft.net.uwpcoreruntimesdk.2.2.14.nupkg.sha512",

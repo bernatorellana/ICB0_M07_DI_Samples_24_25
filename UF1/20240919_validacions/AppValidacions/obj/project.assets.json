@@ -10262,11 +10262,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
+      "projectUniqueName": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
       "projectName": "AppValidacions",
-      "projectPath": "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
+      "projectPath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\AppValidacions.csproj",
       "packagesPath": "C:\\Users\\Usuari\\.nuget\\packages\\",
-      "outputPath": "C:\\temp\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\obj\\",
+      "outputPath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20240919_validacions\\AppValidacions\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

@@ -125,7 +125,8 @@ namespace AppValidacions
 
         private void txbDataNaix_PreviewKeyDown(object sender, KeyRoutedEventArgs e)
         {
-            
+  
+
             // Mirem si el shift està apretat (crida simpàtica al code de Windows)
             bool shiftApretat = Window.Current.CoreWindow.GetKeyState(VirtualKey.Shift).HasFlag(CoreVirtualKeyStates.Down);
 
