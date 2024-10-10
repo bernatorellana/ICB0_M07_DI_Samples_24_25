@@ -89,6 +89,35 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <GridView x:ConnectionId='4' x:Name="grdNoms" Height="200" Background="AliceBlue">
+
+            <GridView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        BorderBrush="DarkGray"
+                        BorderThickness="2"
+                        Background="FloralWhite"
+                        Padding="10">
+                        <Grid ColumnSpacing="15" RowSpacing="15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="2*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock VerticalAlignment="Center" FontSize="25" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" Text="{Binding Id}"></TextBlock>
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Name}"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Age}"></TextBlock>
+
+                        </Grid>
+                    </Border>
+
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
     </StackPanel>
 </Page>
 

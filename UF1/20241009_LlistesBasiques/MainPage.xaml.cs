@@ -46,6 +46,7 @@ namespace _20241009_LlistesBasiques
 
             lsvNoms.ItemsSource = personas;
             lsvNomsHoritzontal.ItemsSource = personas;
+            grdNoms.ItemsSource = personas;
             //lsvNoms.DisplayMemberPath = "FullData";
         }
     }
