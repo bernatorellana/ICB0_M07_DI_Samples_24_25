@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _20241009_LlistesBasiques.model
 {
-     class Persona
+    public class Persona
     {
 
         private int id;

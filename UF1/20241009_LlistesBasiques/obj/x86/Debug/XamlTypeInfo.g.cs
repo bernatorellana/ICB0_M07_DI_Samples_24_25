@@ -189,15 +189,21 @@ namespace _20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
-            _typeNameTable[0] = "_20241009_LlistesBasiques.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable = new string[6];
+            _typeNameTable[0] = "_20241009_LlistesBasiques.UIFitxaPersona";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[2] = "_20241009_LlistesBasiques.model.Persona";
+            _typeNameTable[3] = "Object";
+            _typeNameTable[4] = "_20241009_LlistesBasiques.MainPage";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
 
-            _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::_20241009_LlistesBasiques.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable = new global::System.Type[6];
+            _typeTable[0] = typeof(global::_20241009_LlistesBasiques.UIFitxaPersona);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[2] = typeof(global::_20241009_LlistesBasiques.model.Persona);
+            _typeTable[3] = typeof(global::System.Object);
+            _typeTable[4] = typeof(global::_20241009_LlistesBasiques.MainPage);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -232,7 +238,8 @@ namespace _20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::_20241009_LlistesBasiques.MainPage(); }
+        private object Activate_0_UIFitxaPersona() { return new global::_20241009_LlistesBasiques.UIFitxaPersona(); }
+        private object Activate_4_MainPage() { return new global::_20241009_LlistesBasiques.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -244,18 +251,37 @@ namespace _20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  _20241009_LlistesBasiques.MainPage
-                userType = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  _20241009_LlistesBasiques.UIFitxaPersona
+                userType = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_0_UIFitxaPersona;
+                userType.AddMemberName("LaPersona");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  _20241009_LlistesBasiques.model.Persona
+                userType = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 3:   //  Object
+                xamlType = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 4:   //  _20241009_LlistesBasiques.MainPage
+                userType = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -263,11 +289,32 @@ namespace _20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo
         }
 
 
+        private object get_0_UIFitxaPersona_LaPersona(object instance)
+        {
+            var that = (global::_20241009_LlistesBasiques.UIFitxaPersona)instance;
+            return that.LaPersona;
+        }
+        private void set_0_UIFitxaPersona_LaPersona(object instance, object Value)
+        {
+            var that = (global::_20241009_LlistesBasiques.UIFitxaPersona)instance;
+            that.LaPersona = (global::_20241009_LlistesBasiques.model.Persona)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlMember xamlMember = null;
-            // No Local Properties
+            global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlUserType userType;
+
+            switch (longMemberName)
+            {
+            case "_20241009_LlistesBasiques.UIFitxaPersona.LaPersona":
+                userType = (global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlUserType)GetXamlTypeByName("_20241009_LlistesBasiques.UIFitxaPersona");
+                xamlMember = new global::_20241009_LlistesBasiques._0241009_LlistesBasiques_XamlTypeInfo.XamlMember(this, "LaPersona", "_20241009_LlistesBasiques.model.Persona");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_UIFitxaPersona_LaPersona;
+                xamlMember.Setter = set_0_UIFitxaPersona_LaPersona;
+                break;
+            }
             return xamlMember;
         }
     }

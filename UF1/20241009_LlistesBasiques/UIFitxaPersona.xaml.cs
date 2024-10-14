@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _20241009_LlistesBasiques.model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,5 +24,22 @@ namespace _20241009_LlistesBasiques
         {
             this.InitializeComponent();
         }
+
+        // Creem una depedency property (assistent "propdp"+2*TAB)
+
+
+
+        public Persona LaPersona
+        {
+            get { return (Persona)GetValue(LaPersonaProperty); }
+            set { SetValue(LaPersonaProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for LaPersona.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty LaPersonaProperty =
+            DependencyProperty.Register("LaPersona", typeof(Persona), typeof(UIFitxaPersona), new PropertyMetadata(null));
+
+
+
     }
 }

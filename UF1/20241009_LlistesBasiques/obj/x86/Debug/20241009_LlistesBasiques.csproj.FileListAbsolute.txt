@@ -41,3 +41,8 @@ C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesB
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\bin\x86\Debug\UIFitxaPersona.xbf
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\obj\x86\Debug\UIFitxaPersona.g.i.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\obj\x86\Debug\UIFitxaPersona.g.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\obj\x86\Debug\UIFitxaPersona.xaml
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241009_LlistesBasiques\obj\x86\Debug\UIFitxaPersona.xbf
