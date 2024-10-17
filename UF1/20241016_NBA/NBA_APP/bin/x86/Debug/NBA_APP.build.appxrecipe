@@ -70,6 +70,9 @@
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\View\UIJugador.xbf">
+      <PackagePath>View\UIJugador.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\View\UITeam.xbf">
       <PackagePath>View\UITeam.xbf</PackagePath>
     </AppxPackagedFile>

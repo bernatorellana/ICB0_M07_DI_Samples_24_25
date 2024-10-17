@@ -128,6 +128,9 @@
     <Compile Include="Model\OC.cs" />
     <Compile Include="Model\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\UIJugador.xaml.cs">
+      <DependentUpon>UIJugador.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\UITeam.xaml.cs">
       <DependentUpon>UITeam.xaml</DependentUpon>
     </Compile>
@@ -155,6 +158,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\UIJugador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\UITeam.xaml">
       <SubType>Designer</SubType>

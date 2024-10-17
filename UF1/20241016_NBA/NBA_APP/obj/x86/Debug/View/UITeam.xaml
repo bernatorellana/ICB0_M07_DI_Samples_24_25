@@ -12,13 +12,16 @@
     >
 
     <Grid
+        ColumnSpacing="10"
+        RowSpacing="10"
         >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
@@ -29,23 +32,33 @@
         <Image 
             Grid.Column="0"
             Grid.Row="1"
+            Grid.RowSpan="3"
             Width="100"
             Source="{Binding ElementName=uc, Path=MyTeam.UrlLogo, FallbackValue='https://picsum.photos/200/300'}"></Image>
         <TextBox Background="Black" 
                  Foreground="GreenYellow"
                  Grid.Column="1"
-                Grid.Row="1"
+                 Grid.Row="1"
+                 Grid.RowSpan="2"
                  TextWrapping="Wrap"
                  Text="{Binding ElementName=uc, Path=MyTeam.Desc, FallbackValue=XXXXXXXXXXXXXXXXXXXXXXXXx}"
             ></TextBox>
-        <Image Source="" 
+        <Image Source="{Binding ElementName=uc, Path=MyTeam.Coach.UrlFoto}" 
                Width="100"
                Height="100"
                Grid.Column="2"
                 Grid.Row="1"></Image>
         <ListView x:ConnectionId='2' x:Name="lsvPlayers" Grid.Column="2"
-                Grid.Row="2" Width="100">
-            
+                  Grid.Row="2"
+                  Background="Black"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"              
+                  ItemsSource="{Binding ElementName=uc, Path=MyTeam.Jugadors}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:UIJugador ThePlayer="{Binding}"></local:UIJugador>
+                </DataTemplate>
+            </ListView.ItemTemplate>
         </ListView>
     </Grid>
 </UserControl>

@@ -189,21 +189,27 @@ namespace NBA_APP.NBA_APP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[9];
             _typeNameTable[0] = "NBA_APP.View.UITeam";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "NBA_APP.Model.Equip";
             _typeNameTable[3] = "Object";
             _typeNameTable[4] = "NBA_APP.MainPage";
             _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[6] = "NBA_APP.View.UIJugador";
+            _typeNameTable[7] = "NBA_APP.Model.Jugador";
+            _typeNameTable[8] = "NBA_APP.Model.Persona";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[9];
             _typeTable[0] = typeof(global::NBA_APP.View.UITeam);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::NBA_APP.Model.Equip);
             _typeTable[3] = typeof(global::System.Object);
             _typeTable[4] = typeof(global::NBA_APP.MainPage);
             _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[6] = typeof(global::NBA_APP.View.UIJugador);
+            _typeTable[7] = typeof(global::NBA_APP.Model.Jugador);
+            _typeTable[8] = typeof(global::NBA_APP.Model.Persona);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -240,6 +246,7 @@ namespace NBA_APP.NBA_APP_XamlTypeInfo
 
         private object Activate_0_UITeam() { return new global::NBA_APP.View.UITeam(); }
         private object Activate_4_MainPage() { return new global::NBA_APP.MainPage(); }
+        private object Activate_6_UIJugador() { return new global::NBA_APP.View.UIJugador(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -284,6 +291,27 @@ namespace NBA_APP.NBA_APP_XamlTypeInfo
             case 5:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::NBA_APP.NBA_APP_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
+
+            case 6:   //  NBA_APP.View.UIJugador
+                userType = new global::NBA_APP.NBA_APP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_6_UIJugador;
+                userType.AddMemberName("ThePlayer");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  NBA_APP.Model.Jugador
+                userType = new global::NBA_APP.NBA_APP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("NBA_APP.Model.Persona"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  NBA_APP.Model.Persona
+                userType = new global::NBA_APP.NBA_APP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
@@ -299,6 +327,16 @@ namespace NBA_APP.NBA_APP_XamlTypeInfo
             var that = (global::NBA_APP.View.UITeam)instance;
             that.MyTeam = (global::NBA_APP.Model.Equip)Value;
         }
+        private object get_1_UIJugador_ThePlayer(object instance)
+        {
+            var that = (global::NBA_APP.View.UIJugador)instance;
+            return that.ThePlayer;
+        }
+        private void set_1_UIJugador_ThePlayer(object instance, object Value)
+        {
+            var that = (global::NBA_APP.View.UIJugador)instance;
+            that.ThePlayer = (global::NBA_APP.Model.Jugador)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -313,6 +351,13 @@ namespace NBA_APP.NBA_APP_XamlTypeInfo
                 xamlMember.SetIsDependencyProperty();
                 xamlMember.Getter = get_0_UITeam_MyTeam;
                 xamlMember.Setter = set_0_UITeam_MyTeam;
+                break;
+            case "NBA_APP.View.UIJugador.ThePlayer":
+                userType = (global::NBA_APP.NBA_APP_XamlTypeInfo.XamlUserType)GetXamlTypeByName("NBA_APP.View.UIJugador");
+                xamlMember = new global::NBA_APP.NBA_APP_XamlTypeInfo.XamlMember(this, "ThePlayer", "NBA_APP.Model.Jugador");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_1_UIJugador_ThePlayer;
+                xamlMember.Setter = set_1_UIJugador_ThePlayer;
                 break;
             }
             return xamlMember;
