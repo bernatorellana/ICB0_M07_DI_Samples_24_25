@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI.Xaml.Shapes;
 
@@ -27,14 +28,14 @@ namespace BuscaminesApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private readonly int CELL_SIZE = 30;
+        private readonly int CELL_SIZE = 32;
         private const int FILES = 16;
         private const int COLUMNES = 16;
         private const int MINES = 40;
         private const int MINA = 9;
 
         private int[,] tauler;
-
+        private Dictionary<Punt,Image> imageList = new Dictionary<Punt, Image>();
 
         public MainPage()
         {
@@ -134,9 +135,79 @@ namespace BuscaminesApp
                     b.VerticalAlignment = VerticalAlignment.Center;
                     b.HorizontalAlignment = HorizontalAlignment.Center;
                     b.Padding = new Thickness(0);
+                    //-----------------------------------------------
+                    // Tapem ara el número amb la imatge
+                    //< Image Source = "/Assets/tile.png" />
+                    Image im = new Image();
+                    BitmapImage i = new BitmapImage();
+                    i.UriSource = new Uri("ms-appx://BuscaminesApp/Assets/tile.png");
+                    i.DecodePixelHeight = CELL_SIZE;
+                    i.DecodePixelWidth = CELL_SIZE;
+                    i.DecodePixelType = DecodePixelType.Logical;
+                    im.Source = i;
+                    im.Stretch = Stretch.UniformToFill;
+                    im.MaxHeight = CELL_SIZE;
+                    im.MaxWidth = CELL_SIZE;
+                    
+                    im.Height = CELL_SIZE;
+                    im.Width= CELL_SIZE;
+                    Grid.SetColumn(im, c);
+                    Grid.SetRow(im, f);
+                    grid.Children.Add(im);
+
+                    
+
+                    im.Tapped += Im_Tapped;
+                    im.RightTapped += Im_RightTapped;
+                    Punt p = new Punt(f, c);
+                    im.Tag = p;
+                    imageList.Add(p, im);
                 }
             }
 
+        }
+
+        private void Im_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Im_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            Image i = (Image)sender;
+            i.Visibility = Visibility.Collapsed;
+            Punt p = (Punt)i.Tag;
+            int valor = tauler[p.F, p.C];
+            if(valor == MINA)
+            {
+
+            } else
+            {
+                destapa(p);
+            }            
+        }
+
+        private void destapa(Punt p)
+        {
+            if (p.F < 0 || p.F >= FILES || p.C < 0 || p.C >= COLUMNES) return;
+            if (tauler[p.F, p.C] > 0) return;
+
+            imageList[p].Visibility = Visibility.Collapsed;
+
+            int[,] mods = { {  0,  1 }, 
+                            {  0, -1 }, 
+                            { -1,  0 }, 
+                            {  1,  0 }, 
+                            /*/{  1,  1 }, 
+                            { -1,  1 }, 
+                            {  1, -1 }, 
+                            { -1, -1 }*/ };
+            for(int i=0;i<mods.GetLength(0);i++)
+            {
+                Punt n = new Punt(p.F + mods[i,0], p.C + mods[i, 1]);
+                if (imageList.ContainsKey(n) && imageList[n].Visibility != Visibility.Visible) continue;
+                destapa(n);
+            }
         }
 
         private string getTextFromNumber(int mineNumber)
