@@ -30,17 +30,21 @@
     <AppXManifest Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-10-17T15:56:52.091</Modified>
+      <Modified>2024-10-17T17:23:49.347</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\NBA_APP.exe">
       <PackagePath>entrypoint\NBA_APP.exe</PackagePath>
-      <Modified>2024-10-17T15:56:51.720</Modified>
+      <Modified>2024-10-17T17:23:49.069</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2022-06-10T20:24:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\FodyWeavers.xml">
+      <PackagePath>FodyWeavers.xml</PackagePath>
+      <Modified>2024-10-17T17:15:02.133</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -82,23 +86,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\NBA_APP.xr.xml">
       <PackagePath>NBA_APP.xr.xml</PackagePath>
-      <Modified>2024-10-17T15:56:51.658</Modified>
+      <Modified>2024-10-17T17:23:48.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2024-10-17T15:56:51.661</Modified>
+      <Modified>2024-10-17T17:23:48.977</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2024-10-17T15:56:51.661</Modified>
+      <Modified>2024-10-17T17:23:48.977</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\View\CRUDPage.xbf">
+      <PackagePath>View\CRUDPage.xbf</PackagePath>
+      <Modified>2024-10-17T17:23:48.977</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\View\UIJugador.xbf">
       <PackagePath>View\UIJugador.xbf</PackagePath>
-      <Modified>2024-10-17T15:56:51.661</Modified>
+      <Modified>2024-10-17T17:23:48.977</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\View\UITeam.xbf">
       <PackagePath>View\UITeam.xbf</PackagePath>
-      <Modified>2024-10-17T15:56:51.661</Modified>
+      <Modified>2024-10-17T17:23:48.977</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -106,11 +114,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-10-17T15:56:51.891</Modified>
+      <Modified>2024-10-17T17:15:02.715</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\Core\NBA_APP.exe">
       <PackagePath>NBA_APP.exe</PackagePath>
-      <Modified>2024-10-17T15:56:52.089</Modified>
+      <Modified>2024-10-17T17:23:49.345</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

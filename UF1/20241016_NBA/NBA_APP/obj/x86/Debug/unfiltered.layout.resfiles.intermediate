@@ -9,6 +9,8 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 NBA_APP.xr.xml
+View\CRUDPage.xbf
 View\UIJugador.xbf
 View\UITeam.xbf
+FodyWeavers.xml
 Properties\Default.rd.xml

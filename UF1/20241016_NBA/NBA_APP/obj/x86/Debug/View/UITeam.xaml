@@ -50,7 +50,7 @@
                 Grid.Row="1"></Image>
         <ListView x:ConnectionId='2' x:Name="lsvPlayers" Grid.Column="2"
                   Grid.Row="2"
-                  Background="Black"
+                  Background="White"
                   HorizontalAlignment="Stretch"
                   VerticalAlignment="Stretch"              
                   ItemsSource="{Binding ElementName=uc, Path=MyTeam.Jugadors}">

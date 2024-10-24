@@ -1,4 +1,5 @@
 ﻿using NBA_APP.Model;
+using NBA_APP.View;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,8 +27,17 @@ namespace NBA_APP
         public MainPage()
         {
             this.InitializeComponent();
+           
 
             this.lsvTeams.ItemsSource = Equip.getLlistaEquips();
+
+
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(CRUDPage));
         }
     }
 }

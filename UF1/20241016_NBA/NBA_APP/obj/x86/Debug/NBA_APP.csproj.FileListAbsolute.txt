@@ -51,3 +51,11 @@ C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\View\UIJugador.g.cs
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\View\UIJugador.xaml
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\View\UIJugador.xbf
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\bin\x86\Debug\View\CRUDPage.xbf
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\View\CRUDPage.g.i.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\View\CRUDPage.g.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\View\CRUDPage.xaml
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\View\CRUDPage.xbf
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\NBA_APP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\NBA_APP.csproj.Fody.CopyLocal.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241016_NBA\NBA_APP\obj\x86\Debug\NBA_APP.csproj.Fody.RuntimeCopyLocal.cache

@@ -17,9 +17,9 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image Source="{Binding ElementName=uc,Path=ThePlayer.UrlFoto}"></Image>
-        <TextBlock Text="{Binding ElementName=uc,Path=ThePlayer.Dorsal}"></TextBlock>
-        <TextBlock Text="{Binding ElementName=uc,Path=ThePlayer.Cognoms}"></TextBlock>
+        <Image Grid.Column="1" Source="{Binding ElementName=uc,Path=ThePlayer.UrlFoto}"></Image>
+        <TextBlock Grid.Column="0" FontSize="30" Text="{Binding ElementName=uc,Path=ThePlayer.Dorsal}"></TextBlock>
+        <TextBlock Grid.Column="2"  Text="{Binding ElementName=uc,Path=ThePlayer.Cognoms}"></TextBlock>
     </Grid>
 </UserControl>
 

@@ -6,15 +6,16 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:view="using:NBA_APP.View"
     mc:Ignorable="d"
+    Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListView x:Name="lsvTeams">
-            <ListView.ItemTemplate>
+        <GridView x:Name="lsvTeams">
+            <GridView.ItemTemplate>
                 <DataTemplate>
                     <view:UITeam MyTeam="{Binding}"></view:UITeam>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </GridView.ItemTemplate>
+        </GridView>
     </Grid>
 </Page>

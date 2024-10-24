@@ -10,6 +10,7 @@ namespace NBA_APP.Model
 {
     public class Equip: INotifyPropertyChanged
     {
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private long id;
@@ -33,7 +34,13 @@ namespace NBA_APP.Model
         }
 
         public long Id { get => id; set => id = value; }
-        public string Nom { get => nom; set => nom = value; }
+        public string Nom { get => nom; 
+            set { 
+                nom = value;
+                // DESPRÉS DE CANVIAR EL VALOR, AVISEM QUE LA PROPIETAT HA CANVIAT
+                //PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Nom)));
+            } 
+        }
         public string UrlLogo { get => urlLogo; set => urlLogo = value; }
         public string Desc { get => desc; set => desc = value; }
         public DateTimeOffset DataCreacio { get => dataCreacio; set {
