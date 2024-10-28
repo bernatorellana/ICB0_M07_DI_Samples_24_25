@@ -8,6 +8,8 @@ namespace BuscaminesApp
 {
     internal class Punt
     {
+        public bool Flagged { get; set; }
+
         public Punt(int f, int c)
         {
             F = f;

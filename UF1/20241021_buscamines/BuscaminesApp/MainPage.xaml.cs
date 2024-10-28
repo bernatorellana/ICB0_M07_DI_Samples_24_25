@@ -169,7 +169,14 @@ namespace BuscaminesApp
 
         private void Im_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            Image tapa = (Image)sender;
+
+
+
+            i.UriSource = new Uri("ms-appx://BuscaminesApp/Assets/tile.png");
+
+
+
         }
 
         private void Im_Tapped(object sender, TappedRoutedEventArgs e)
