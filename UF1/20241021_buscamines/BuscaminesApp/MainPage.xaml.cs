@@ -37,6 +37,8 @@ namespace BuscaminesApp
         private int[,] tauler;
         private Dictionary<Punt,Image> imageList = new Dictionary<Punt, Image>();
 
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -135,6 +137,7 @@ namespace BuscaminesApp
                     b.VerticalAlignment = VerticalAlignment.Center;
                     b.HorizontalAlignment = HorizontalAlignment.Center;
                     b.Padding = new Thickness(0);
+                    b.Visibility = Visibility.Collapsed;
                     //-----------------------------------------------
                     // Tapem ara el número amb la imatge
                     //< Image Source = "/Assets/tile.png" />
@@ -159,7 +162,10 @@ namespace BuscaminesApp
 
                     im.Tapped += Im_Tapped;
                     im.RightTapped += Im_RightTapped;
+
                     Punt p = new Punt(f, c);
+                    p.isFlagged = false;
+                    p.MinaText = b; // desem la referència del textbox que està sota l'Image
                     im.Tag = p;
                     imageList.Add(p, im);
                 }
@@ -170,24 +176,32 @@ namespace BuscaminesApp
         private void Im_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
             Image tapa = (Image)sender;
-
-
-
-            i.UriSource = new Uri("ms-appx://BuscaminesApp/Assets/tile.png");
-
-
+            Punt p = (Punt)tapa.Tag;
+            BitmapImage i = new BitmapImage();
+            if (p.isFlagged)
+            {
+                i.UriSource = new Uri("ms-appx://BuscaminesApp/Assets/tile.png");
+            } else
+            {
+                i.UriSource = new Uri("ms-appx://BuscaminesApp/Assets/flag.png");
+            }
+            tapa.Source = i;
+            p.isFlagged = !p.isFlagged;
 
         }
 
         private void Im_Tapped(object sender, TappedRoutedEventArgs e)
         {
             Image i = (Image)sender;
-            i.Visibility = Visibility.Collapsed;
             Punt p = (Punt)i.Tag;
+            if (p.isFlagged) return; // No podem clicar sobre banderes
+            
+            i.Visibility = Visibility.Collapsed;
+            p.MinaText.Visibility=Visibility.Visible;
             int valor = tauler[p.F, p.C];
             if(valor == MINA)
             {
-
+                //GAME OVER
             } else
             {
                 destapa(p);
@@ -197,9 +211,12 @@ namespace BuscaminesApp
         private void destapa(Punt p)
         {
             if (p.F < 0 || p.F >= FILES || p.C < 0 || p.C >= COLUMNES) return;
-            if (tauler[p.F, p.C] > 0) return;
+            
 
             imageList[p].Visibility = Visibility.Collapsed;
+            p.MinaText.Visibility= Visibility.Visible;
+
+            if (tauler[p.F, p.C] > 0) return;
 
             int[,] mods = { {  0,  1 }, 
                             {  0, -1 }, 
@@ -213,7 +230,11 @@ namespace BuscaminesApp
             {
                 Punt n = new Punt(p.F + mods[i,0], p.C + mods[i, 1]);
                 if (imageList.ContainsKey(n) && imageList[n].Visibility != Visibility.Visible) continue;
-                destapa(n);
+
+                if (imageList.ContainsKey(n)) {
+                    Punt complet = imageList[n].Tag as Punt;
+                    destapa(complet);
+                }
             }
         }
 

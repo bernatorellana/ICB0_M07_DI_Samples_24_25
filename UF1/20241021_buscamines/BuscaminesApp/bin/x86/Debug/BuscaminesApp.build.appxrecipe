@@ -37,6 +37,9 @@
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\face_ko.png">
       <PackagePath>Assets\face_ko.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\flag.png">
+      <PackagePath>Assets\flag.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\tile.png">
       <PackagePath>Assets\tile.png</PackagePath>
     </AppxPackagedFile>

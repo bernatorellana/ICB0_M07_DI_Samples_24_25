@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace BuscaminesApp
 {
     internal class Punt
     {
-        public bool Flagged { get; set; }
+
+        public TextBlock MinaText{ get; set; }
+
+        public bool isFlagged { get; set; }
 
         public Punt(int f, int c)
         {
