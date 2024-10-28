@@ -28,6 +28,31 @@ namespace BuscaminesApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public enum MODE
+        {
+            IN_GAME,
+            GAME_OVER
+        }
+
+        private MODE mode;
+
+        public MODE Mode
+        {
+            get { return mode; }
+            set { 
+                switch(value)
+                {
+                    case MainPage.MODE.IN_GAME:break;
+                    
+                    case MainPage.MODE.GAME_OVER:break;
+                        
+                }
+                mode = value; // !!!
+            }
+        }
+
+
         private readonly int CELL_SIZE = 32;
         private const int FILES = 16;
         private const int COLUMNES = 16;
@@ -175,6 +200,8 @@ namespace BuscaminesApp
 
         private void Im_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
+            if (Mode == MODE.GAME_OVER) return;
+
             Image tapa = (Image)sender;
             Punt p = (Punt)tapa.Tag;
             BitmapImage i = new BitmapImage();
@@ -192,6 +219,8 @@ namespace BuscaminesApp
 
         private void Im_Tapped(object sender, TappedRoutedEventArgs e)
         {
+            if (Mode == MODE.GAME_OVER) return;
+
             Image i = (Image)sender;
             Punt p = (Punt)i.Tag;
             if (p.isFlagged) return; // No podem clicar sobre banderes
@@ -201,7 +230,8 @@ namespace BuscaminesApp
             int valor = tauler[p.F, p.C];
             if(valor == MINA)
             {
-                //GAME OVER
+                Mode = MODE.GAME_OVER;
+
             } else
             {
                 destapa(p);
