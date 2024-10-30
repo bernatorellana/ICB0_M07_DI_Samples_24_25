@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -27,6 +28,34 @@ namespace BuscaminesApp.View
             this.InitializeComponent();
         }
 
+
+
+
+        public int Seconds
+        {
+            get { return (int)GetValue(SecondsProperty); }
+            set { SetValue(SecondsProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Seconds.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty SecondsProperty =
+            DependencyProperty.Register("Seconds", typeof(int), typeof(UIBoard), new PropertyMetadata(0));
+
+
+
+
+        public int MarkedMinesNumber
+        {
+            get { return (int)GetValue(MarkedMinesNumberProperty); }
+            set { SetValue(MarkedMinesNumberProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for MarkedMinesNumber.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty MarkedMinesNumberProperty =
+            DependencyProperty.Register("MarkedMinesNumber", typeof(int), typeof(UIBoard), new PropertyMetadata(0));
+
+
+
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             Mode = MODE.IN_GAME;
@@ -35,7 +64,8 @@ namespace BuscaminesApp.View
         public enum MODE
         {
             IN_GAME,
-            GAME_OVER
+            GAME_OVER,
+            WIN
         }
 
         private MODE mode;
@@ -50,6 +80,7 @@ namespace BuscaminesApp.View
                     case MODE.IN_GAME:
                         initTauler();
                         showTauler();
+                        startTime();
                         break;
 
                     case MODE.GAME_OVER: break;
@@ -70,7 +101,10 @@ namespace BuscaminesApp.View
         private Dictionary<Punt, Image> imageList = new Dictionary<Punt, Image>();
 
 
-
+        private void startTime()
+        {
+            
+        }
 
 
         private void initTauler()
@@ -212,13 +246,16 @@ namespace BuscaminesApp.View
             if (p.isFlagged)
             {
                 i.UriSource = new Uri("ms-appx://BuscaminesApp/Assets/tile.png");
+                MarkedMinesNumber--;
             }
             else
             {
                 i.UriSource = new Uri("ms-appx://BuscaminesApp/Assets/flag.png");
+                MarkedMinesNumber++;
             }
             tapa.Source = i;
             p.isFlagged = !p.isFlagged;
+            
 
         }
 
