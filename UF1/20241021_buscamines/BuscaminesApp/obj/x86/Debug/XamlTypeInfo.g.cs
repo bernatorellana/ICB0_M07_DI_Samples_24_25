@@ -189,23 +189,25 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
-            _typeNameTable[0] = "BuscaminesApp.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "BuscaminesApp.MainPage.MODE";
-            _typeNameTable[4] = "System.Enum";
-            _typeNameTable[5] = "System.ValueType";
-            _typeNameTable[6] = "Object";
+            _typeNameTable = new string[8];
+            _typeNameTable[0] = "BuscaminesApp.View.UIBoard";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[2] = "BuscaminesApp.View.UIBoard.MODE";
+            _typeNameTable[3] = "System.Enum";
+            _typeNameTable[4] = "System.ValueType";
+            _typeNameTable[5] = "Object";
+            _typeNameTable[6] = "BuscaminesApp.MainPage";
+            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Page";
 
-            _typeTable = new global::System.Type[7];
-            _typeTable[0] = typeof(global::BuscaminesApp.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::BuscaminesApp.MainPage.MODE);
-            _typeTable[4] = typeof(global::System.Enum);
-            _typeTable[5] = typeof(global::System.ValueType);
-            _typeTable[6] = typeof(global::System.Object);
+            _typeTable = new global::System.Type[8];
+            _typeTable[0] = typeof(global::BuscaminesApp.View.UIBoard);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[2] = typeof(global::BuscaminesApp.View.UIBoard.MODE);
+            _typeTable[3] = typeof(global::System.Enum);
+            _typeTable[4] = typeof(global::System.ValueType);
+            _typeTable[5] = typeof(global::System.Object);
+            _typeTable[6] = typeof(global::BuscaminesApp.MainPage);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Page);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -240,7 +242,8 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::BuscaminesApp.MainPage(); }
+        private object Activate_0_UIBoard() { return new global::BuscaminesApp.View.UIBoard(); }
+        private object Activate_6_MainPage() { return new global::BuscaminesApp.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -252,41 +255,48 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  BuscaminesApp.MainPage
-                userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  BuscaminesApp.View.UIBoard
+                userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_0_UIBoard;
                 userType.AddMemberName("Mode");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  BuscaminesApp.MainPage.MODE
+            case 2:   //  BuscaminesApp.View.UIBoard.MODE
                 userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("IN_GAME", global::BuscaminesApp.MainPage.MODE.IN_GAME);
-                userType.AddEnumValue("GAME_OVER", global::BuscaminesApp.MainPage.MODE.GAME_OVER);
+                userType.AddEnumValue("IN_GAME", global::BuscaminesApp.View.UIBoard.MODE.IN_GAME);
+                userType.AddEnumValue("GAME_OVER", global::BuscaminesApp.View.UIBoard.MODE.GAME_OVER);
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  System.Enum
+            case 3:   //  System.Enum
                 userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 5:   //  System.ValueType
+            case 4:   //  System.ValueType
                 userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 6:   //  Object
+            case 5:   //  Object
+                xamlType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  BuscaminesApp.MainPage
+                userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -294,15 +304,15 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
         }
 
 
-        private object get_0_MainPage_Mode(object instance)
+        private object get_0_UIBoard_Mode(object instance)
         {
-            var that = (global::BuscaminesApp.MainPage)instance;
+            var that = (global::BuscaminesApp.View.UIBoard)instance;
             return that.Mode;
         }
-        private void set_0_MainPage_Mode(object instance, object Value)
+        private void set_0_UIBoard_Mode(object instance, object Value)
         {
-            var that = (global::BuscaminesApp.MainPage)instance;
-            that.Mode = (global::BuscaminesApp.MainPage.MODE)Value;
+            var that = (global::BuscaminesApp.View.UIBoard)instance;
+            that.Mode = (global::BuscaminesApp.View.UIBoard.MODE)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -312,11 +322,11 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "BuscaminesApp.MainPage.Mode":
-                userType = (global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BuscaminesApp.MainPage");
-                xamlMember = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember(this, "Mode", "BuscaminesApp.MainPage.MODE");
-                xamlMember.Getter = get_0_MainPage_Mode;
-                xamlMember.Setter = set_0_MainPage_Mode;
+            case "BuscaminesApp.View.UIBoard.Mode":
+                userType = (global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BuscaminesApp.View.UIBoard");
+                xamlMember = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember(this, "Mode", "BuscaminesApp.View.UIBoard.MODE");
+                xamlMember.Getter = get_0_UIBoard_Mode;
+                xamlMember.Setter = set_0_UIBoard_Mode;
                 break;
             }
             return xamlMember;

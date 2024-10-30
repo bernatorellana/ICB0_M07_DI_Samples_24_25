@@ -41,3 +41,8 @@ C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamin
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\bin\x86\Debug\View\UIBoard.xbf
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\obj\x86\Debug\View\UIBoard.g.i.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\obj\x86\Debug\View\UIBoard.g.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\obj\x86\Debug\View\UIBoard.xaml
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\obj\x86\Debug\View\UIBoard.xbf
