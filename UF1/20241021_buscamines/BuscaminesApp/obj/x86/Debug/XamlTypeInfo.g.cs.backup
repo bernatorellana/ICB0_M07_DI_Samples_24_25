@@ -189,23 +189,15 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
+            _typeNameTable = new string[3];
             _typeNameTable[0] = "BuscaminesApp.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "BuscaminesApp.MainPage.MODE";
-            _typeNameTable[4] = "System.Enum";
-            _typeNameTable[5] = "System.ValueType";
-            _typeNameTable[6] = "Object";
 
-            _typeTable = new global::System.Type[7];
+            _typeTable = new global::System.Type[3];
             _typeTable[0] = typeof(global::BuscaminesApp.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::BuscaminesApp.MainPage.MODE);
-            _typeTable[4] = typeof(global::System.Enum);
-            _typeTable[5] = typeof(global::System.ValueType);
-            _typeTable[6] = typeof(global::System.Object);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -255,7 +247,6 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
             case 0:   //  BuscaminesApp.MainPage
                 userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_MainPage;
-                userType.AddMemberName("Mode");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -267,58 +258,16 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
-
-            case 3:   //  BuscaminesApp.MainPage.MODE
-                userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
-                userType.AddEnumValue("IN_GAME", global::BuscaminesApp.MainPage.MODE.IN_GAME);
-                userType.AddEnumValue("GAME_OVER", global::BuscaminesApp.MainPage.MODE.GAME_OVER);
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 4:   //  System.Enum
-                userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
-                xamlType = userType;
-                break;
-
-            case 5:   //  System.ValueType
-                userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                xamlType = userType;
-                break;
-
-            case 6:   //  Object
-                xamlType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
             }
             return xamlType;
         }
 
 
-        private object get_0_MainPage_Mode(object instance)
-        {
-            var that = (global::BuscaminesApp.MainPage)instance;
-            return that.Mode;
-        }
-        private void set_0_MainPage_Mode(object instance, object Value)
-        {
-            var that = (global::BuscaminesApp.MainPage)instance;
-            that.Mode = (global::BuscaminesApp.MainPage.MODE)Value;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember xamlMember = null;
-            global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "BuscaminesApp.MainPage.Mode":
-                userType = (global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BuscaminesApp.MainPage");
-                xamlMember = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember(this, "Mode", "BuscaminesApp.MainPage.MODE");
-                xamlMember.Getter = get_0_MainPage_Mode;
-                xamlMember.Setter = set_0_MainPage_Mode;
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }
