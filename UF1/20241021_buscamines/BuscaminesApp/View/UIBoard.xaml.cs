@@ -59,8 +59,6 @@ namespace BuscaminesApp.View
         }
 
 
-
-
         // Using a DependencyProperty as the backing store for Seconds.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SecondsProperty =
             DependencyProperty.Register("Seconds", typeof(int), typeof(UIBoard), new PropertyMetadata(0));
@@ -296,7 +294,7 @@ namespace BuscaminesApp.View
 
         private void Im_RightTapped(object sender, RightTappedRoutedEventArgs e)
         {
-            if (Mode == MODE.GAME_OVER) return;
+            if (Mode == MODE.GAME_OVER || Mode == MODE.WIN) return;
             
             Mode = MODE.IN_GAME;
 
@@ -321,7 +319,7 @@ namespace BuscaminesApp.View
 
         private void Im_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            if (Mode == MODE.GAME_OVER) return;
+            if (Mode == MODE.GAME_OVER || Mode==MODE.WIN) return;
 
             Mode = MODE.IN_GAME;
 
@@ -348,6 +346,10 @@ namespace BuscaminesApp.View
             if (p.F < 0 || p.F >= FILES || p.C < 0 || p.C >= COLUMNES) return;
 
             CasellesDestapades++;
+            if(p.isFlagged)
+            {
+                MarkedMinesNumber--;
+            }
 
             imageList[p].Visibility = Visibility.Collapsed;
             p.MinaText.Visibility = Visibility.Visible;

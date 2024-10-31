@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-10-31T18:14:59.078</Modified>
+      <Modified>2024-10-31T18:22:06.734</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\bin\x86\Debug\BuscaminesApp.exe">
       <PackagePath>entrypoint\BuscaminesApp.exe</PackagePath>
-      <Modified>2024-10-31T18:14:58.820</Modified>
+      <Modified>2024-10-31T18:22:06.449</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -110,15 +110,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2024-10-31T18:14:58.775</Modified>
+      <Modified>2024-10-31T18:22:06.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2024-10-31T18:14:58.775</Modified>
+      <Modified>2024-10-31T18:22:06.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\bin\x86\Debug\View\UIBoard.xbf">
       <PackagePath>View\UIBoard.xbf</PackagePath>
-      <Modified>2024-10-31T18:14:58.775</Modified>
+      <Modified>2024-10-31T18:22:06.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -130,7 +130,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\bin\x86\Debug\Core\BuscaminesApp.exe">
       <PackagePath>BuscaminesApp.exe</PackagePath>
-      <Modified>2024-10-31T18:14:59.076</Modified>
+      <Modified>2024-10-31T18:22:06.733</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
