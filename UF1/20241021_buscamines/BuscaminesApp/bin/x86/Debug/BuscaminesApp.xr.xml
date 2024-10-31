@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
   <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Seconds" />
     <RootPropertyPathName Name="MarkedMinesNumber" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -44,8 +45,12 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="Source" />
+      <RootEvent Name="Tapped" />
     </RootType>
-    <RootType FullName="BuscaminesApp.View.UIBoard" />
+    <RootType FullName="BuscaminesApp.View.UIBoard">
+      <RootEvent Name="OnWin" />
+      <RootEvent Name="OnGameOver" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="Foreground" />
@@ -64,6 +69,5 @@
       <RootProperty Name="Content" />
       <RootEvent Name="Loaded" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Canvas" />
   </Roots.RootTypes>
 </Roots>

@@ -136,6 +136,8 @@
   <ItemGroup>
     <Content Include="Assets\face.png" />
     <Content Include="Assets\face_ko.png" />
+    <Content Include="Assets\face_win.gif" />
+    <Content Include="Assets\face_win.png" />
     <Content Include="Assets\flag.png" />
     <Content Include="Assets\tile.png" />
     <Content Include="Properties\Default.rd.xml" />

@@ -29,17 +29,19 @@
         </Grid.RowDefinitions>
         <Border Grid.Column="0" Grid.Row="0" 
                 Background="Black">
-            <TextBlock Text="{Binding ElementName=board, Path=MarkedMinesNumber,FallbackValue=000}" Foreground="red"
+            <TextBlock Text="{Binding ElementName=board, 
+                Path=MarkedMinesNumber,FallbackValue=000}" Foreground="red"
                        FontSize="50"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
                        FontFamily="Digital-7 Mono"
                        ></TextBlock>
         </Border>
-        <Image Grid.Column="1" Grid.Row="0" Width="60" Height="60" Source="/Assets/face.png" />
+        <Image x:ConnectionId='2' x:Name="imgFace" Grid.Column="1" Grid.Row="0" Width="60"
+                                     Height="60" Source="/Assets/face.png" />
         <Border Grid.Column="2" Grid.Row="0" 
                 Background="Black">
-            <TextBlock Text="000" Foreground="red"
+            <TextBlock Text="{Binding ElementName=board,Path=Seconds,FallbackValue=000}" Foreground="red"
                        FontSize="50"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
@@ -48,7 +50,7 @@
         </Border>
 
 
-        <view:UIBoard x:ConnectionId='2' x:Name="board" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1"></view:UIBoard>
+        <view:UIBoard x:ConnectionId='3'                                                   x:Name="board" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1"></view:UIBoard>
     </Grid>
     </Grid>
 </Page>

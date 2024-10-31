@@ -260,6 +260,8 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
             case 0:   //  BuscaminesApp.View.UIBoard
                 userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_UIBoard;
+                userType.AddMemberName("Seconds");
+                userType.AddMemberName("CasellesDestapades");
                 userType.AddMemberName("MarkedMinesNumber");
                 userType.AddMemberName("Mode");
                 userType.SetIsLocalType();
@@ -276,6 +278,7 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
 
             case 3:   //  BuscaminesApp.View.UIBoard.MODE
                 userType = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("READY", global::BuscaminesApp.View.UIBoard.MODE.READY);
                 userType.AddEnumValue("IN_GAME", global::BuscaminesApp.View.UIBoard.MODE.IN_GAME);
                 userType.AddEnumValue("GAME_OVER", global::BuscaminesApp.View.UIBoard.MODE.GAME_OVER);
                 userType.AddEnumValue("WIN", global::BuscaminesApp.View.UIBoard.MODE.WIN);
@@ -312,22 +315,42 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
         }
 
 
-        private object get_0_UIBoard_MarkedMinesNumber(object instance)
+        private object get_0_UIBoard_Seconds(object instance)
+        {
+            var that = (global::BuscaminesApp.View.UIBoard)instance;
+            return that.Seconds;
+        }
+        private void set_0_UIBoard_Seconds(object instance, object Value)
+        {
+            var that = (global::BuscaminesApp.View.UIBoard)instance;
+            that.Seconds = (global::System.Int32)Value;
+        }
+        private object get_1_UIBoard_CasellesDestapades(object instance)
+        {
+            var that = (global::BuscaminesApp.View.UIBoard)instance;
+            return that.CasellesDestapades;
+        }
+        private void set_1_UIBoard_CasellesDestapades(object instance, object Value)
+        {
+            var that = (global::BuscaminesApp.View.UIBoard)instance;
+            that.CasellesDestapades = (global::System.Int32)Value;
+        }
+        private object get_2_UIBoard_MarkedMinesNumber(object instance)
         {
             var that = (global::BuscaminesApp.View.UIBoard)instance;
             return that.MarkedMinesNumber;
         }
-        private void set_0_UIBoard_MarkedMinesNumber(object instance, object Value)
+        private void set_2_UIBoard_MarkedMinesNumber(object instance, object Value)
         {
             var that = (global::BuscaminesApp.View.UIBoard)instance;
             that.MarkedMinesNumber = (global::System.Int32)Value;
         }
-        private object get_1_UIBoard_Mode(object instance)
+        private object get_3_UIBoard_Mode(object instance)
         {
             var that = (global::BuscaminesApp.View.UIBoard)instance;
             return that.Mode;
         }
-        private void set_1_UIBoard_Mode(object instance, object Value)
+        private void set_3_UIBoard_Mode(object instance, object Value)
         {
             var that = (global::BuscaminesApp.View.UIBoard)instance;
             that.Mode = (global::BuscaminesApp.View.UIBoard.MODE)Value;
@@ -340,18 +363,31 @@ namespace BuscaminesApp.BuscaminesApp_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "BuscaminesApp.View.UIBoard.Seconds":
+                userType = (global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BuscaminesApp.View.UIBoard");
+                xamlMember = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember(this, "Seconds", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_UIBoard_Seconds;
+                xamlMember.Setter = set_0_UIBoard_Seconds;
+                break;
+            case "BuscaminesApp.View.UIBoard.CasellesDestapades":
+                userType = (global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BuscaminesApp.View.UIBoard");
+                xamlMember = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember(this, "CasellesDestapades", "Int32");
+                xamlMember.Getter = get_1_UIBoard_CasellesDestapades;
+                xamlMember.Setter = set_1_UIBoard_CasellesDestapades;
+                break;
             case "BuscaminesApp.View.UIBoard.MarkedMinesNumber":
                 userType = (global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BuscaminesApp.View.UIBoard");
                 xamlMember = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember(this, "MarkedMinesNumber", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_UIBoard_MarkedMinesNumber;
-                xamlMember.Setter = set_0_UIBoard_MarkedMinesNumber;
+                xamlMember.Getter = get_2_UIBoard_MarkedMinesNumber;
+                xamlMember.Setter = set_2_UIBoard_MarkedMinesNumber;
                 break;
             case "BuscaminesApp.View.UIBoard.Mode":
                 userType = (global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlUserType)GetXamlTypeByName("BuscaminesApp.View.UIBoard");
                 xamlMember = new global::BuscaminesApp.BuscaminesApp_XamlTypeInfo.XamlMember(this, "Mode", "BuscaminesApp.View.UIBoard.MODE");
-                xamlMember.Getter = get_1_UIBoard_Mode;
-                xamlMember.Setter = set_1_UIBoard_Mode;
+                xamlMember.Getter = get_3_UIBoard_Mode;
+                xamlMember.Setter = set_3_UIBoard_Mode;
                 break;
             }
             return xamlMember;

@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +23,7 @@ using static BuscaminesApp.View.UIBoard;
 namespace BuscaminesApp
 {
 
+    
 
 
     /// <summary>
@@ -37,6 +39,30 @@ namespace BuscaminesApp
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
            
+        }
+
+        private void Image_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            imgFace.Source = new BitmapImage(
+                new Uri("ms-appx:///Assets/face.png")
+            );
+            board.Mode = MODE.READY;
+        }
+
+        private void board_OnGameOver(object sender, EventArgs e)
+        {
+            imgFace.Source = new BitmapImage(
+                    new Uri("ms-appx:///Assets/face_ko.png")
+                    );
+        }
+
+        private async void board_OnWin(object sender, EventArgs e)
+        {
+            imgFace.Source = new BitmapImage(
+                new Uri("ms-appx:///Assets/face_win.png")
+            );
+            MessageDialog md = new MessageDialog("YOU WIN!");
+            await md.ShowAsync();
         }
     }
 }

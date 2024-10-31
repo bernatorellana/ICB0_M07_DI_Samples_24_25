@@ -37,6 +37,9 @@
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\face_ko.png">
       <PackagePath>Assets\face_ko.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\face_win.png">
+      <PackagePath>Assets\face_win.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\flag.png">
       <PackagePath>Assets\flag.png</PackagePath>
     </AppxPackagedFile>
@@ -69,6 +72,9 @@
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Assets\face_win.gif">
+      <PackagePath>Assets\face_win.gif</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241021_buscamines\BuscaminesApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>

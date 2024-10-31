@@ -11,8 +11,7 @@
                                >
 
     <Grid x:ConnectionId='2' x:Name="grid">
-        <Canvas x:ConnectionId='3' x:Name="cnv">
-        </Canvas>
+        
     </Grid>
 </UserControl>
 
