@@ -32,6 +32,7 @@
                  BorderThickness="0"
                  VerticalContentAlignment="Center"
                  FontSize="20"
+                                                     
                  Text="123"></TextBox>
         </Border>
         

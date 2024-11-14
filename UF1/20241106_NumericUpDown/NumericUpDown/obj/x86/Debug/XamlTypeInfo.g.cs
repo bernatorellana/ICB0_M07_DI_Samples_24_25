@@ -253,8 +253,8 @@ namespace NumericUpDown.NumericUpDown_XamlTypeInfo
                 userType = new global::NumericUpDown.NumericUpDown_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_0_UINumericUpDown;
                 userType.AddMemberName("Valor");
-                userType.AddMemberName("Max");
                 userType.AddMemberName("Min");
+                userType.AddMemberName("Max");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -292,25 +292,25 @@ namespace NumericUpDown.NumericUpDown_XamlTypeInfo
             var that = (global::NumericUpDown.View.UINumericUpDown)instance;
             that.Valor = (global::System.Int32)Value;
         }
-        private object get_1_UINumericUpDown_Max(object instance)
-        {
-            var that = (global::NumericUpDown.View.UINumericUpDown)instance;
-            return that.Max;
-        }
-        private void set_1_UINumericUpDown_Max(object instance, object Value)
-        {
-            var that = (global::NumericUpDown.View.UINumericUpDown)instance;
-            that.Max = (global::System.Int32)Value;
-        }
-        private object get_2_UINumericUpDown_Min(object instance)
+        private object get_1_UINumericUpDown_Min(object instance)
         {
             var that = (global::NumericUpDown.View.UINumericUpDown)instance;
             return that.Min;
         }
-        private void set_2_UINumericUpDown_Min(object instance, object Value)
+        private void set_1_UINumericUpDown_Min(object instance, object Value)
         {
             var that = (global::NumericUpDown.View.UINumericUpDown)instance;
             that.Min = (global::System.Int32)Value;
+        }
+        private object get_2_UINumericUpDown_Max(object instance)
+        {
+            var that = (global::NumericUpDown.View.UINumericUpDown)instance;
+            return that.Max;
+        }
+        private void set_2_UINumericUpDown_Max(object instance, object Value)
+        {
+            var that = (global::NumericUpDown.View.UINumericUpDown)instance;
+            that.Max = (global::System.Int32)Value;
         }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
@@ -327,19 +327,19 @@ namespace NumericUpDown.NumericUpDown_XamlTypeInfo
                 xamlMember.Getter = get_0_UINumericUpDown_Valor;
                 xamlMember.Setter = set_0_UINumericUpDown_Valor;
                 break;
-            case "NumericUpDown.View.UINumericUpDown.Max":
-                userType = (global::NumericUpDown.NumericUpDown_XamlTypeInfo.XamlUserType)GetXamlTypeByName("NumericUpDown.View.UINumericUpDown");
-                xamlMember = new global::NumericUpDown.NumericUpDown_XamlTypeInfo.XamlMember(this, "Max", "Int32");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_UINumericUpDown_Max;
-                xamlMember.Setter = set_1_UINumericUpDown_Max;
-                break;
             case "NumericUpDown.View.UINumericUpDown.Min":
                 userType = (global::NumericUpDown.NumericUpDown_XamlTypeInfo.XamlUserType)GetXamlTypeByName("NumericUpDown.View.UINumericUpDown");
                 xamlMember = new global::NumericUpDown.NumericUpDown_XamlTypeInfo.XamlMember(this, "Min", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_UINumericUpDown_Min;
-                xamlMember.Setter = set_2_UINumericUpDown_Min;
+                xamlMember.Getter = get_1_UINumericUpDown_Min;
+                xamlMember.Setter = set_1_UINumericUpDown_Min;
+                break;
+            case "NumericUpDown.View.UINumericUpDown.Max":
+                userType = (global::NumericUpDown.NumericUpDown_XamlTypeInfo.XamlUserType)GetXamlTypeByName("NumericUpDown.View.UINumericUpDown");
+                xamlMember = new global::NumericUpDown.NumericUpDown_XamlTypeInfo.XamlMember(this, "Max", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_2_UINumericUpDown_Max;
+                xamlMember.Setter = set_2_UINumericUpDown_Max;
                 break;
             }
             return xamlMember;

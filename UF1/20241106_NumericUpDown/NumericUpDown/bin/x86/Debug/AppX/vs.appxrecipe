@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241106_NumericUpDown\NumericUpDown\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-11-06T20:21:49.980</Modified>
+      <Modified>2024-11-07T16:56:52.624</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241106_NumericUpDown\NumericUpDown\bin\x86\Debug\NumericUpDown.exe">
       <PackagePath>entrypoint\NumericUpDown.exe</PackagePath>
-      <Modified>2024-11-06T20:21:49.713</Modified>
+      <Modified>2024-11-07T16:56:52.350</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.14\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -82,19 +82,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241106_NumericUpDown\NumericUpDown\bin\x86\Debug\NumericUpDown.xr.xml">
       <PackagePath>NumericUpDown.xr.xml</PackagePath>
-      <Modified>2024-11-06T20:18:52.619</Modified>
+      <Modified>2024-11-07T16:53:37.538</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241106_NumericUpDown\NumericUpDown\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2024-11-06T20:21:49.677</Modified>
+      <Modified>2024-11-07T16:56:52.308</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241106_NumericUpDown\NumericUpDown\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2024-11-06T20:21:49.677</Modified>
+      <Modified>2024-11-07T16:56:52.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241106_NumericUpDown\NumericUpDown\bin\x86\Debug\View\UINumericUpDown.xbf">
       <PackagePath>View\UINumericUpDown.xbf</PackagePath>
-      <Modified>2024-11-06T20:21:49.677</Modified>
+      <Modified>2024-11-07T16:56:52.309</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -106,7 +106,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241106_NumericUpDown\NumericUpDown\bin\x86\Debug\Core\NumericUpDown.exe">
       <PackagePath>NumericUpDown.exe</PackagePath>
-      <Modified>2024-11-06T20:21:49.978</Modified>
+      <Modified>2024-11-07T16:56:52.622</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -9,8 +9,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <view:UINumericUpDown x:ConnectionId='2' x:Name="nud" Valor="12"></view:UINumericUpDown>
-        <Button x:ConnectionId='3'                     ></Button>
+        <view:UINumericUpDown x:ConnectionId='2' x:Name="nud"  Valor="12" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:ConnectionId='3' x:Name="nud1"  Valor="4" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:ConnectionId='4' x:Name="nud2"  Valor="5" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:ConnectionId='5' x:Name="nud3"  Valor="6" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:ConnectionId='6' x:Name="nud4"  Valor="3" Min="0" Max="10"></view:UINumericUpDown>
+        <Button x:ConnectionId='7'                     ></Button>
     </StackPanel>
 </Page>
 

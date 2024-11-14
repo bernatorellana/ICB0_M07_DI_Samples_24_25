@@ -37,8 +37,15 @@ namespace NumericUpDown.View
 
         private static void valorChangedCallbackStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            UINumericUpDown yoMismo = (UINumericUpDown)d;
-            yoMismo.showNumero();
+            UINumericUpDown control = (UINumericUpDown)d;
+            control.valorChangedCallback(d, e);  // Cridem al mètode no estàtic         
+        }
+
+        private void valorChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Valor = Math.Clamp(Valor, Min, Max);
+            // Actualitzem el valor a la interfície
+            showNumero();
         }
 
         public int Max
@@ -49,9 +56,18 @@ namespace NumericUpDown.View
 
         // Using a DependencyProperty as the backing store for Max.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MaxProperty =
-            DependencyProperty.Register("Max", typeof(int), typeof(UINumericUpDown), new PropertyMetadata(100));
+            DependencyProperty.Register("Max", typeof(int), typeof(UINumericUpDown), new PropertyMetadata(100, MaxMinChangedCallbackStatic));
 
+        private static void MaxMinChangedCallbackStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            UINumericUpDown control = (UINumericUpDown)d;
+            control.MaxMinChangedCallback(d, e);
+        }
 
+        private void MaxMinChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            Valor = Math.Clamp(Valor, Min, Max);// Math.Min(Max, Math.Max(Min, Valor));
+        }
 
         public int Min
         {
@@ -61,28 +77,40 @@ namespace NumericUpDown.View
 
         // Using a DependencyProperty as the backing store for Min.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty MinProperty =
-            DependencyProperty.Register("Min", typeof(int), typeof(UINumericUpDown), new PropertyMetadata(0));
+            DependencyProperty.Register("Min", typeof(int), typeof(UINumericUpDown), new PropertyMetadata(0, MaxMinChangedCallbackStatic));
 
         private void btnUp_Click(object sender, RoutedEventArgs e)
         {
             Valor++;
-            showNumero();
         }
 
         private void showNumero()
         {
-            txbNumero.Text = Valor.ToString();
+            txbNumero.Text = Valor.ToString("#").Replace("+","");
         }
 
         private void btnDown_Click(object sender, RoutedEventArgs e)
         {
             Valor--;
-            showNumero();
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             showNumero();
+        }
+
+
+
+        private void txbNumero_TextChanging(TextBox sender, TextBoxTextChangingEventArgs args)
+        {
+            int resultat;
+            bool isNumero = int.TryParse(sender.Text, out resultat);
+            if (isNumero)
+            {
+                Valor = resultat;
+            }
+            showNumero(); // maxaquem la porqueria de l'usuari
+            
         }
     }
 }

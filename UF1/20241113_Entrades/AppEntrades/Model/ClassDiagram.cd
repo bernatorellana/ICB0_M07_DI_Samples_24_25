@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="">
+    <Position X="7.854" Y="2.296" Height="7.395" Width="0.7" />
+  </Comment>
+  <Comment CommentText="S'edita amb el gestor de Sales">
+    <Position X="5.669" Y="9.653" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Gestió d'events">
+    <Position X="10.875" Y="9.826" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="AppEntrades.Event">
+    <Position X="9.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAACACAAAAAAAIAAAAAACCABAAAAQAAAAAgA=</HashCode>
+      <FileName>Event.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="tipus" />
+      <Field Name="sala" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="tarifes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppEntrades.Sala">
+    <Position X="5.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAgAAAAAAAAAAIAJAgAIAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Sala.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="zones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppEntrades.Cadira">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAABgAAAAAgA=</HashCode>
+      <FileName>Cadira.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AppEntrades.Zona">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAAAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAgA=</HashCode>
+      <FileName>Zona.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="cadires" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="AppEntrades.Tarifa">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAQAAAABAAAAIAAAAAAA=</HashCode>
+      <FileName>Tarifa.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="zona" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="AppEntrades.TipusEvent">
+    <Position X="13" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAUAAAAAAAAA=</HashCode>
+      <FileName>TipusEvent.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -9,7 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <StackPanel>
-        <view:UINumericUpDown x:Name="nud" Valor="12"></view:UINumericUpDown>
+        <view:UINumericUpDown x:Name="nud"  Valor="12" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:Name="nud1"  Valor="4" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:Name="nud2"  Valor="5" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:Name="nud3"  Valor="6" Min="0" Max="10"></view:UINumericUpDown>
+        <view:UINumericUpDown x:Name="nud4"  Valor="3" Min="0" Max="10"></view:UINumericUpDown>
         <Button Click="Button_Click"></Button>
     </StackPanel>
 </Page>

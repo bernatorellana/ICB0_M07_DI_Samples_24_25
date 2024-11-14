@@ -12,6 +12,8 @@
     </RootType>
     <RootType FullName="NumericUpDown.View.UINumericUpDown">
       <RootProperty Name="Valor" />
+      <RootProperty Name="Min" />
+      <RootProperty Name="Max" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -52,6 +54,7 @@
       <RootProperty Name="VerticalContentAlignment" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Text" />
+      <RootEvent Name="TextChanging" />
     </RootType>
   </Roots.RootTypes>
 </Roots>
