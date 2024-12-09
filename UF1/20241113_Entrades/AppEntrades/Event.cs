@@ -16,5 +16,6 @@ namespace AppEntrades
         private datetime data;
         private List<Tarifa> tarifes;
         private Sala sala;
+        private Estat estat;
     }
 }

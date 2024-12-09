@@ -9,13 +9,16 @@
     xmlns:wctprimitives="using:Microsoft.Toolkit.Uwp.UI.Controls.Primitives"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    Loaded="Page_Loaded">
+    Loaded="Page_Loaded"
+    x:Name="page"
+    >
 
     <Grid>
         <controls:DataGrid  
             AutoGenerateColumns="False"
             GridLinesVisibility="All" 
              AlternatingRowBackground="LightGray"
+            ItemsSource="{Binding Heroes}"
             x:Name="dgrData">
             <controls:DataGrid.ColumnHeaderStyle>
                 
@@ -36,6 +39,21 @@
                 </Style>
             </controls:DataGrid.ColumnHeaderStyle>
 
+
+
+            <controls:DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <StackPanel  Padding="20" Spacing="3">
+                        <!--<TextBlock Margin="20" Text="{Binding Desc}"/>-->
+                        <controls:DataGrid ItemsSource="{Binding Team.Heroes}">
+                            
+                        </controls:DataGrid>
+                    </StackPanel>
+                </DataTemplate>
+            </controls:DataGrid.RowDetailsTemplate>
+
+
+
             <controls:DataGrid.Columns>
 
                 <controls:DataGridTemplateColumn>
@@ -47,6 +65,29 @@
                 </controls:DataGridTemplateColumn>
                 <controls:DataGridTextColumn Binding="{Binding Name}" Header="NAME"></controls:DataGridTextColumn>
                 <controls:DataGridTextColumn Binding="{Binding Desc}" MaxWidth="200" Header="DESC"></controls:DataGridTextColumn>
+                <controls:DataGridTemplateColumn>
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Vertical">
+                                <Image HorizontalAlignment="Center"  Width="50" Source="{Binding Team.UrlPhoto}"></Image>
+                                <TextBlock HorizontalAlignment="Center" Text="{Binding Team.Name}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+
+                <controls:DataGridTemplateColumn>
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ListBox ItemsSource="{Binding AlterEgos}"></ListBox>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+
+
+                <controls:DataGridTextColumn Binding="{Binding SexIcon}" MaxWidth="200" Header="Sex"></controls:DataGridTextColumn>
+
+
             </controls:DataGrid.Columns>
         </controls:DataGrid>
 

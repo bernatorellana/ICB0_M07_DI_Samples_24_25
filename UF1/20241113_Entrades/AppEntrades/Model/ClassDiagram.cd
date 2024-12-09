@@ -7,17 +7,18 @@
     <Position X="5.669" Y="9.653" Height="0.75" Width="1.7" />
   </Comment>
   <Comment CommentText="Gestió d'events">
-    <Position X="10.875" Y="9.826" Height="0.75" Width="1.7" />
+    <Position X="13.664" Y="10.037" Height="0.75" Width="1.7" />
   </Comment>
   <Class Name="AppEntrades.Event">
     <Position X="9.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAAACACAAAAAAAIAAAAAACCABAAAAQAAAAAgA=</HashCode>
+      <HashCode>AAAABAAAIACACAAAAAAAIAAAAAACCABAAAAQAAAAAgA=</HashCode>
       <FileName>Event.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="tipus" />
       <Field Name="sala" />
+      <Field Name="estat" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="tarifes" />
@@ -65,6 +66,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAUAAAAAAAAA=</HashCode>
       <FileName>TipusEvent.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AppEntrades.Estat">
+    <Position X="11" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAACAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Estat.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

@@ -28,9 +28,28 @@ namespace AppDataGrid
             this.InitializeComponent();
         }
 
+
+
+        public List<Hero> Heroes
+        {
+            get { return (List<Hero>)GetValue(HeroesProperty); }
+            set { SetValue(HeroesProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Heroes.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty HeroesProperty =
+            DependencyProperty.Register("Heroes", typeof(List<Hero>), typeof(MainPage), new PropertyMetadata(new List<Hero>()));
+
+
+
+
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            dgrData.ItemsSource = Hero.GetListOfHeroes();
+
+            this.DataContext = this;
+
+            //dgrData.ItemsSource = Hero.GetListOfHeroes();
+            Heroes = Hero.GetListOfHeroes();
         }
     }
 }

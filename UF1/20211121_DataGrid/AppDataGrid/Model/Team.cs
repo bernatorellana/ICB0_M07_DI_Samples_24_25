@@ -38,6 +38,16 @@ namespace AppDataGrid.Model
 
         public string Name { get => name; set => name = value; }
         public string UrlPhoto { get => urlPhoto; set => urlPhoto = value; }
+
+
+        public List<Hero> Heroes
+        {
+            get
+            {
+               return Hero.GetListOfHeroes().FindAll(h => h.Team == this);
+            }
+        }
+
     }
 
 

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "2R52IH0xNp9IXjekhPGV5Nc6qovw+smsoQmk3CLez8mwhxjeo5s9RXuOv8oB5p9Cn2rFUWPiR99+Lm/466M9lw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20241204_DB\\DBDemo\\ModelEstandard\\ModelEstandard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Usuari\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,13 @@
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\bin\Debug\netstandard2.0\DBStandard.deps.json
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\bin\Debug\netstandard2.0\DBStandard.dll
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\bin\Debug\netstandard2.0\DBStandard.pdb
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\bin\Debug\netstandard2.0\ModelEstandard.dll
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\bin\Debug\netstandard2.0\ModelEstandard.pdb
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.csproj.AssemblyReference.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.AssemblyInfoInputs.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.AssemblyInfo.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.csproj.CoreCompileInputs.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.csproj.CopyComplete
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.dll
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\obj\Debug\netstandard2.0\DBStandard.pdb

@@ -71,7 +71,7 @@ namespace AppDataGrid.Model
         {
             get
             {
-                return Sex ? "♂" : "♀";
+                return Sex ? "♂" : "♀";// 🐪🐪🐪
             }
         }
 
