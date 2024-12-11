@@ -31,5 +31,15 @@ namespace DBDemo
             dtgDepts.ItemsSource = departaments;
             txbCount.Text = DeptDB.GetNumDepts() + "";
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -8,9 +8,21 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <StackPanel Orientation="Vertical">
-        <TextBox x:ConnectionId='2' x:Name="txbCount"></TextBox>
-        <controls:DataGrid x:ConnectionId='3' x:Name="dtgDepts"></controls:DataGrid>
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBox x:ConnectionId='2' x:Name="txbCount" Grid.Row="0" Grid.Column="0"></TextBox>
+        <controls:DataGrid x:ConnectionId='3' x:Name="dtgDepts" Grid.Row="1" Grid.Column="0"></controls:DataGrid>
+        <Button x:ConnectionId='4' x:Name="btnDelete" Grid.Row="2" Grid.Column="0"                        >
+            <SymbolIcon Symbol="Delete"></SymbolIcon>
+        </Button>
+    </Grid>
 </Page>
 
