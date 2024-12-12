@@ -53,6 +53,10 @@
             "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid": {
               "target": "Package",
               "version": "[5.1.0, )"
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             }
           },
           "imports": [
@@ -207,6 +211,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "PropertyChanged.Fody": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             }
           },
           "imports": [

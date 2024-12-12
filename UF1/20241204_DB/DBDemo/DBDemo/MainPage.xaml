@@ -19,7 +19,7 @@
             <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBox x:Name="txbCount" Grid.Row="0" Grid.Column="0"></TextBox>
-        <controls:DataGrid x:Name="dtgDepts" Grid.Row="1" Grid.Column="0"></controls:DataGrid>
+        <controls:DataGrid SelectionChanged="dtgDepts_SelectionChanged" x:Name="dtgDepts" Grid.Row="1" Grid.Column="0"></controls:DataGrid>
         <Button x:Name="btnDelete"
                 Margin="20"
                 Grid.Row="2" Grid.Column="0" Click="btnDelete_Click">
@@ -49,10 +49,10 @@
             <TextBox x:Name="txbNom" Grid.Row="1" Grid.Column="1" Text="Nom"></TextBox>
             <TextBox x:Name="txbLoc"  Grid.Row="2" Grid.Column="1" Text="Loc"></TextBox>
 
-            <Button x:Name="btnAdd" Grid.Row="3" Grid.Column="0">
+            <Button x:Name="btnAdd" Click="btnAdd_Click" Grid.Row="3" Grid.Column="0">
                 <SymbolIcon Symbol="Add"></SymbolIcon>
             </Button>
-            <Button x:Name="btnSave"  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">
+            <Button x:Name="btnSave" Click="btnSave_Click"  Grid.Row="3" Grid.Column="1" HorizontalAlignment="Right">
                 <SymbolIcon Symbol="Save"></SymbolIcon>
             </Button>
         </Grid>

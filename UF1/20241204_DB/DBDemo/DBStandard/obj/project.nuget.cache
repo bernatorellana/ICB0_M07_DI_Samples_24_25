@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0fcac7VYonS2/fKjslgSj67k+PBdf1C59bBW6TtQN4DVfQ4n1oaQ3Y8aWgZrJIRFJiLiclKKANTIE6ryWwZf/g==",
+  "dgSpecHash": "G4F6VHmv6n+dKa/jocnPAlptjGaxGdjQT2E5C6lH8qRFzLyhM3X/k0dTvO8GmVTRnVxMIZg2uvBn7P7r6xvlyw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20241204_DB\\DBDemo\\DBStandard\\DBStandard.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Usuari\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -28,6 +29,7 @@
     "C:\\Users\\Usuari\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\3.2.7\\pomelo.entityframeworkcore.mysql.3.2.7.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\pomelo.jsonobject\\2.2.1\\pomelo.jsonobject.2.2.1.nupkg.sha512",
+    "C:\\Users\\Usuari\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",

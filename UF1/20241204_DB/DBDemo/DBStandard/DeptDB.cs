@@ -118,5 +118,110 @@ namespace DB
                 }
             }
         }
+
+        public static bool update(Dept d)
+        {
+            using (MySQLDBContext context = new MySQLDBContext())
+            {
+                using (var connexio = context.Database.GetDbConnection()) // <== NOTA IMPORTANT: requereix ==>using Microsoft.EntityFrameworkCore;
+                {
+                    // Obrir la connexió a la BD
+                    connexio.Open();
+
+                    var transaction = connexio.BeginTransaction();
+
+                    // Crear una consulta SQL
+                    using (var consulta = connexio.CreateCommand())
+                    {
+
+                        // query SQL
+                        consulta.CommandText = @"
+                            update dept set dnom=@dnom, loc=@loc
+                            where dept_no = @dept_no
+                        ";
+
+                        // NO US LA DEIXEU SI US PLAU !
+                        consulta.Transaction = transaction;
+
+
+                        DbUtils.createParam(consulta, "dept_no", d.DeptNo, System.Data.DbType.Int32);
+                        DbUtils.createParam(consulta, "dnom", d.DName, System.Data.DbType.String);
+                        DbUtils.createParam(consulta, "loc", d.Loc, System.Data.DbType.String);
+
+                        try
+                        {
+                            int filesAfectades = consulta.ExecuteNonQuery();
+                            if (filesAfectades == 1)
+                            {
+                                transaction.Commit();
+                                return true;
+                            }
+                            else
+                            {
+                                transaction.Rollback();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            transaction.Rollback();
+                        }
+
+                    }
+                    return false;
+                }
+            }
+        }
+
+        public static bool Insert(Dept d)
+        {
+            using (MySQLDBContext context = new MySQLDBContext())
+            {
+                using (var connexio = context.Database.GetDbConnection()) // <== NOTA IMPORTANT: requereix ==>using Microsoft.EntityFrameworkCore;
+                {
+                    // Obrir la connexió a la BD
+                    connexio.Open();
+
+                    var transaction = connexio.BeginTransaction();
+
+                    // Crear una consulta SQL
+                    using (var consulta = connexio.CreateCommand())
+                    {
+
+                        // query SQL
+                        consulta.CommandText = @"
+                            insert into dept (dept_no, dnom, loc) values (@dept_no, @dnom, @loc)
+                        ";
+
+                        // NO US LA DEIXEU SI US PLAU !
+                        consulta.Transaction = transaction;
+
+
+                        DbUtils.createParam(consulta, "dept_no", d.DeptNo, System.Data.DbType.Int32);
+                        DbUtils.createParam(consulta, "dnom", d.DName, System.Data.DbType.String);
+                        DbUtils.createParam(consulta, "loc", d.Loc, System.Data.DbType.String);
+
+                        try
+                        {
+                            int filesAfectades = consulta.ExecuteNonQuery();
+                            if (filesAfectades == 1)
+                            {
+                                transaction.Commit();
+                                return true;
+                            }
+                            else
+                            {
+                                transaction.Rollback();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            transaction.Rollback();
+                        }
+
+                    }
+                    return false;
+                }
+            }
+        }
     }
 }

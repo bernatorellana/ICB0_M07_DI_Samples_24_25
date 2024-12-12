@@ -90,3 +90,6 @@ C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDem
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\Pomelo.JsonObject.dll
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\Pomelo.EntityFrameworkCore.MySql\en-US\Pomelo.EntityFrameworkCore.MySql.Properties.MySqlJsonStrings.resw
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\Pomelo.EntityFrameworkCore.MySql\en-US\Pomelo.EntityFrameworkCore.MySql.Properties.MySqlStrings.resw
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\DBDemo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\DBDemo.csproj.Fody.CopyLocal.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\DBDemo.csproj.Fody.RuntimeCopyLocal.cache

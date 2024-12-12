@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -19,11 +20,19 @@ using Windows.UI.Xaml.Navigation;
 
 namespace DBDemo
 {
+
+
+
+
     /// <summary>
     /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        bool modeInsercio = false;
+
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -51,6 +60,50 @@ namespace DBDemo
                     loadDepartaments();
                 }
             }
+        }
+
+        private void dtgDepts_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Dept d = dtgDepts.SelectedItem as Dept;
+            if (d!=null)
+            {                
+                txbNum.Text = d.DeptNo.ToString();
+                txbNom.Text = d.DName.ToString();
+                txbLoc.Text = d.Loc.ToString();
+            }
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            if (modeInsercio)
+            {
+                // MODE INSERT
+                Dept d = new Dept(Int32.Parse(txbNum.Text), txbNom.Text, txbLoc.Text);
+
+                DeptDB.Insert(d);
+                modeInsercio = false;
+            }
+            else
+            {
+                // MODE UPDATE
+                Dept d = dtgDepts.SelectedItem as Dept;
+                d.DName = txbNom.Text;
+                d.Loc = txbLoc.Text;
+
+                if (d != null)
+                {
+                    if (DeptDB.update(d))
+                    {
+
+                    }
+                }
+            }
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            modeInsercio = true;
+            dtgDepts.SelectedIndex = -1;
         }
     }
 }

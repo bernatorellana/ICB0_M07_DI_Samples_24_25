@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2R52IH0xNp9IXjekhPGV5Nc6qovw+smsoQmk3CLez8mwhxjeo5s9RXuOv8oB5p9Cn2rFUWPiR99+Lm/466M9lw==",
+  "dgSpecHash": "dhE0jYGkIAb9kxkGk40UY2wvDJ7e2mGF+DqxQzJp7qpSKV2EGKTGoV8D/oorV28XnuHg2vLd4XV/b86f6WrR9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20241204_DB\\DBDemo\\ModelEstandard\\ModelEstandard.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Usuari\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
     "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Usuari\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Usuari\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Usuari\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
   ],
   "logs": []
 }
