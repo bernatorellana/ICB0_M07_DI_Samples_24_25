@@ -68,5 +68,55 @@ namespace DB
 
         }
 
+        public static bool DeleteDept(int deptNo)
+        {
+            using (MySQLDBContext context = new MySQLDBContext())
+            {
+                using (var connexio = context.Database.GetDbConnection()) // <== NOTA IMPORTANT: requereix ==>using Microsoft.EntityFrameworkCore;
+                {
+                    // Obrir la connexió a la BD
+                    connexio.Open();
+
+                    var transaction = connexio.BeginTransaction();
+
+                    // Crear una consulta SQL
+                    using (var consulta = connexio.CreateCommand())
+                    {
+
+                        // query SQL
+                        consulta.CommandText = @"
+                            delete from dept
+                            where dept_no = @dept_no
+                        ";
+
+                        // NO US LA DEIXEU SI US PLAU !
+                        consulta.Transaction = transaction;
+
+
+                        DbUtils.createParam(consulta, "dept_no", deptNo, System.Data.DbType.Int32);
+
+                        try
+                        {
+                            int filesAfectades = consulta.ExecuteNonQuery();
+                            if (filesAfectades == 1)
+                            {
+                                transaction.Commit();
+                                return true;
+                            }
+                            else
+                            {
+                                transaction.Rollback();
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            transaction.Rollback();
+                        }
+
+                    }
+                    return false;
+                }
+            }
+        }
     }
 }

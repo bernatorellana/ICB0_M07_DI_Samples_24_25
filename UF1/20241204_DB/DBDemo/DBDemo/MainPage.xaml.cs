@@ -27,6 +27,11 @@ namespace DBDemo
         public MainPage()
         {
             this.InitializeComponent();
+            loadDepartaments();
+        }
+
+        private void loadDepartaments()
+        {
             List<Dept> departaments = DeptDB.GetDepts();
             dtgDepts.ItemsSource = departaments;
             txbCount.Text = DeptDB.GetNumDepts() + "";
@@ -39,7 +44,13 @@ namespace DBDemo
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            if(dtgDepts.SelectedItem != null)
+            {
+                if(DeptDB.DeleteDept((dtgDepts.SelectedItem as Dept).DeptNo))
+                {
+                    loadDepartaments();
+                }
+            }
         }
     }
 }
