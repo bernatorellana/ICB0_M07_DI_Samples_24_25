@@ -21,6 +21,7 @@ using Windows.UI.Xaml.Navigation;
 namespace DBDemo
 {
 
+    
 
 
 
@@ -30,12 +31,64 @@ namespace DBDemo
     public sealed partial class MainPage : Page
     {
 
-        bool modeInsercio = false;
+
+        private enum Mode
+        {
+
+            INICIAL,
+            INSERCIO,
+            MODIFICACIO
+        }
+
+        //bool modeInsercio = false;
+
+        private Mode mode;
+
+        private Mode ModeActual
+        {
+            get { return mode; }
+            set { 
+                mode = value;
+                switch (mode)
+                {
+                    case Mode.INSERCIO:
+                        btnAdd.Visibility = Visibility.Collapsed;
+                        btnCancel.Visibility = Visibility.Visible;
+                        btnSave.Visibility = Visibility.Visible;
+
+                        dtgDepts.SelectedItem = null;
+                        txbLoc.Text = "";
+                        txbNom.Text = "";
+                        txbNum.Text = "";                        
+                        break;
+
+                    case Mode.INICIAL:
+                        btnAdd.Visibility = Visibility.Visible;
+                        btnCancel.Visibility = Visibility.Collapsed;
+                        btnSave.Visibility = Visibility.Collapsed;
+
+                        dtgDepts.SelectedItem = null;
+                        txbLoc.Text = "";
+                        txbNom.Text = "";
+                        txbNum.Text = "";
+                        break;
+
+                    case Mode.MODIFICACIO:
+                        btnAdd.Visibility = Visibility.Collapsed;
+                        btnCancel.Visibility = Visibility.Visible;
+                        btnSave.Visibility = Visibility.Visible;
+                        break;
+
+                }
+            }
+        }
+
 
 
         public MainPage()
         {
             this.InitializeComponent();
+            ModeActual = Mode.INICIAL;
             loadDepartaments();
         }
 
@@ -70,20 +123,25 @@ namespace DBDemo
                 txbNum.Text = d.DeptNo.ToString();
                 txbNom.Text = d.DName.ToString();
                 txbLoc.Text = d.Loc.ToString();
+                ModeActual = Mode.MODIFICACIO;
+            } else
+            {
+                ModeActual = Mode.INICIAL;
             }
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-            if (modeInsercio)
+            if (ModeActual==Mode.INSERCIO)
             {
                 // MODE INSERT
-                Dept d = new Dept(Int32.Parse(txbNum.Text), txbNom.Text, txbLoc.Text);
+                Dept d = new Dept(0, txbNom.Text, txbLoc.Text);
 
                 DeptDB.Insert(d);
-                modeInsercio = false;
+                loadDepartaments();
+                ModeActual = Mode.INICIAL;
             }
-            else
+            else if (ModeActual == Mode.MODIFICACIO)
             {
                 // MODE UPDATE
                 Dept d = dtgDepts.SelectedItem as Dept;
@@ -102,8 +160,13 @@ namespace DBDemo
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            modeInsercio = true;
+            ModeActual = Mode.INSERCIO;
             dtgDepts.SelectedIndex = -1;
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            ModeActual = Mode.INICIAL;
         }
     }
 }

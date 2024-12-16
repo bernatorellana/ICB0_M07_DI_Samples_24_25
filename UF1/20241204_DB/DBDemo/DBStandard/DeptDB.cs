@@ -187,6 +187,13 @@ namespace DB
                     using (var consulta = connexio.CreateCommand())
                     {
 
+                        consulta.CommandText = @"
+                            select last_id from ids where table_name='dept' for update
+                            ";
+                        consulta.Transaction = transaction;
+                        int last_id = (int)consulta.ExecuteScalar();
+                        last_id += 10;
+
                         // query SQL
                         consulta.CommandText = @"
                             insert into dept (dept_no, dnom, loc) values (@dept_no, @dnom, @loc)
@@ -196,7 +203,7 @@ namespace DB
                         consulta.Transaction = transaction;
 
 
-                        DbUtils.createParam(consulta, "dept_no", d.DeptNo, System.Data.DbType.Int32);
+                        DbUtils.createParam(consulta, "dept_no", last_id, System.Data.DbType.Int32);
                         DbUtils.createParam(consulta, "dnom", d.DName, System.Data.DbType.String);
                         DbUtils.createParam(consulta, "loc", d.Loc, System.Data.DbType.String);
 
@@ -205,6 +212,13 @@ namespace DB
                             int filesAfectades = consulta.ExecuteNonQuery();
                             if (filesAfectades == 1)
                             {
+
+                                consulta.CommandText = @"
+                                    update ids set last_id= @last_id where table_name='dept';                                ";
+                                consulta.Parameters.Clear(); //netejo paràmetres
+                                DbUtils.createParam(consulta, "last_id", last_id, System.Data.DbType.Int32);
+                                consulta.ExecuteNonQuery();
+
                                 transaction.Commit();
                                 return true;
                             }

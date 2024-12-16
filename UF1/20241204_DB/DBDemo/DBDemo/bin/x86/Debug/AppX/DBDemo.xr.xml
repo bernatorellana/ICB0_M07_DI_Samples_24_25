@@ -29,6 +29,7 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="IsEnabled" />
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
