@@ -93,3 +93,8 @@ C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDem
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\DBDemo.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\DBDemo.csproj.Fody.CopyLocal.cache
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\DBDemo.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\View\PaginationControl.xbf
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\View\PaginationControl.g.i.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\View\PaginationControl.g.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\View\PaginationControl.xaml
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\obj\x86\Debug\View\PaginationControl.xbf

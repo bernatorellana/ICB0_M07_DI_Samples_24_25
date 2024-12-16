@@ -213,7 +213,7 @@ namespace DBDemo.DBDemo_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[34];
+            _typeNameTable = new string[35];
             _typeNameTable[0] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Control";
             _typeNameTable[2] = "Windows.UI.Xaml.Media.Brush";
@@ -248,8 +248,9 @@ namespace DBDemo.DBDemo_XamlTypeInfo
             _typeNameTable[31] = "DBDemo.MainPage";
             _typeNameTable[32] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[33] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[34] = "DBDemo.View.PaginationControl";
 
-            _typeTable = new global::System.Type[34];
+            _typeTable = new global::System.Type[35];
             _typeTable[0] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Control);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Media.Brush);
@@ -284,6 +285,7 @@ namespace DBDemo.DBDemo_XamlTypeInfo
             _typeTable[31] = typeof(global::DBDemo.MainPage);
             _typeTable[32] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[33] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[34] = typeof(global::DBDemo.View.PaginationControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -324,6 +326,7 @@ namespace DBDemo.DBDemo_XamlTypeInfo
         private object Activate_28_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>(); }
         private object Activate_29_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>(); }
         private object Activate_31_MainPage() { return new global::DBDemo.MainPage(); }
+        private object Activate_34_PaginationControl() { return new global::DBDemo.View.PaginationControl(); }
         private void VectorAdd_20_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>)instance;
@@ -608,6 +611,18 @@ namespace DBDemo.DBDemo_XamlTypeInfo
 
             case 33:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::DBDemo.DBDemo_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 34:   //  DBDemo.View.PaginationControl
+                userType = new global::DBDemo.DBDemo_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_34_PaginationControl;
+                userType.AddMemberName("IsPreviousPageButtonEnabled");
+                userType.AddMemberName("IsNextPageButtonEnabled");
+                userType.AddMemberName("CurrentPage");
+                userType.AddMemberName("MinPage");
+                userType.AddMemberName("MaxPage");
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;
@@ -1283,6 +1298,56 @@ namespace DBDemo.DBDemo_XamlTypeInfo
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.SelectedItems;
         }
+        private object get_65_PaginationControl_IsPreviousPageButtonEnabled(object instance)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            return that.IsPreviousPageButtonEnabled;
+        }
+        private void set_65_PaginationControl_IsPreviousPageButtonEnabled(object instance, object Value)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            that.IsPreviousPageButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_66_PaginationControl_IsNextPageButtonEnabled(object instance)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            return that.IsNextPageButtonEnabled;
+        }
+        private void set_66_PaginationControl_IsNextPageButtonEnabled(object instance, object Value)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            that.IsNextPageButtonEnabled = (global::System.Boolean)Value;
+        }
+        private object get_67_PaginationControl_CurrentPage(object instance)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            return that.CurrentPage;
+        }
+        private void set_67_PaginationControl_CurrentPage(object instance, object Value)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            that.CurrentPage = (global::System.Int32)Value;
+        }
+        private object get_68_PaginationControl_MinPage(object instance)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            return that.MinPage;
+        }
+        private void set_68_PaginationControl_MinPage(object instance, object Value)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            that.MinPage = (global::System.Int32)Value;
+        }
+        private object get_69_PaginationControl_MaxPage(object instance)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            return that.MaxPage;
+        }
+        private void set_69_PaginationControl_MaxPage(object instance, object Value)
+        {
+            var that = (global::DBDemo.View.PaginationControl)instance;
+            that.MaxPage = (global::System.Int32)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -1721,6 +1786,40 @@ namespace DBDemo.DBDemo_XamlTypeInfo
                 xamlMember = new global::DBDemo.DBDemo_XamlTypeInfo.XamlMember(this, "SelectedItems", "System.Collections.IList");
                 xamlMember.Getter = get_64_DataGrid_SelectedItems;
                 xamlMember.SetIsReadOnly();
+                break;
+            case "DBDemo.View.PaginationControl.IsPreviousPageButtonEnabled":
+                userType = (global::DBDemo.DBDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DBDemo.View.PaginationControl");
+                xamlMember = new global::DBDemo.DBDemo_XamlTypeInfo.XamlMember(this, "IsPreviousPageButtonEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_65_PaginationControl_IsPreviousPageButtonEnabled;
+                xamlMember.Setter = set_65_PaginationControl_IsPreviousPageButtonEnabled;
+                break;
+            case "DBDemo.View.PaginationControl.IsNextPageButtonEnabled":
+                userType = (global::DBDemo.DBDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DBDemo.View.PaginationControl");
+                xamlMember = new global::DBDemo.DBDemo_XamlTypeInfo.XamlMember(this, "IsNextPageButtonEnabled", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_66_PaginationControl_IsNextPageButtonEnabled;
+                xamlMember.Setter = set_66_PaginationControl_IsNextPageButtonEnabled;
+                break;
+            case "DBDemo.View.PaginationControl.CurrentPage":
+                userType = (global::DBDemo.DBDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DBDemo.View.PaginationControl");
+                xamlMember = new global::DBDemo.DBDemo_XamlTypeInfo.XamlMember(this, "CurrentPage", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_67_PaginationControl_CurrentPage;
+                xamlMember.Setter = set_67_PaginationControl_CurrentPage;
+                break;
+            case "DBDemo.View.PaginationControl.MinPage":
+                userType = (global::DBDemo.DBDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DBDemo.View.PaginationControl");
+                xamlMember = new global::DBDemo.DBDemo_XamlTypeInfo.XamlMember(this, "MinPage", "Int32");
+                xamlMember.Getter = get_68_PaginationControl_MinPage;
+                xamlMember.Setter = set_68_PaginationControl_MinPage;
+                break;
+            case "DBDemo.View.PaginationControl.MaxPage":
+                userType = (global::DBDemo.DBDemo_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DBDemo.View.PaginationControl");
+                xamlMember = new global::DBDemo.DBDemo_XamlTypeInfo.XamlMember(this, "MaxPage", "Int32");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_69_PaginationControl_MaxPage;
+                xamlMember.Setter = set_69_PaginationControl_MaxPage;
                 break;
             }
             return xamlMember;
