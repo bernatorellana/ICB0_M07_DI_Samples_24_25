@@ -32,6 +32,8 @@ namespace DBDemo
     {
 
 
+        private const int ITEMS_PER_PAGE = 2;
+
         private enum Mode
         {
 
@@ -101,9 +103,14 @@ namespace DBDemo
 
         private void loadDepartaments()
         {
-            List<Dept> departaments = DeptDB.GetDepts();
+            long numDept = DeptDB.GetNumDepts();
+
+            int numPage = (int)MathF.Ceiling(numDept / (float)ITEMS_PER_PAGE);
+            pgc.MaxPage = numPage;
+            pgc.MinPage = 1;
+
+            List<Dept> departaments = DeptDB.GetDepts(pgc.CurrentPage,ITEMS_PER_PAGE);
             dtgDepts.ItemsSource = departaments;
-            txbCount.Text = DeptDB.GetNumDepts() + "";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -236,5 +236,10 @@ namespace DB
                 }
             }
         }
+
+        public static List<Dept> GetDepts(int currentPage, int iTEMS_PER_PAGE)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

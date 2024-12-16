@@ -31,9 +31,16 @@
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Text" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootEvent Name="TextChanged" />
     </RootType>
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGrid">
       <RootEvent Name="SelectionChanged" />
+    </RootType>
+    <RootType FullName="DBDemo.View.PaginationControl">
+      <RootProperty Name="Width" />
+      <RootProperty Name="MaxPage" />
+      <RootProperty Name="MinPage" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Margin" />
@@ -43,10 +50,28 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Inlines" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.SymbolIcon">
       <RootProperty Name="Symbol" />
     </RootType>
     <RootType FullName="DBDemo.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Children" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
+      <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
+    </RootType>
   </Roots.RootTypes>
 </Roots>

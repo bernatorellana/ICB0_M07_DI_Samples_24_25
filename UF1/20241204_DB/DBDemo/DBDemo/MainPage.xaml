@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DBDemo"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:view="using:DBDemo.View"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -17,12 +17,21 @@
             <RowDefinition Height="auto"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
             <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
         </Grid.RowDefinitions>
         <TextBox x:Name="txbCount" Grid.Row="0" Grid.Column="0"></TextBox>
         <controls:DataGrid SelectionChanged="dtgDepts_SelectionChanged" x:Name="dtgDepts" Grid.Row="1" Grid.Column="0"></controls:DataGrid>
+        <view:PaginationControl
+            x:Name="pgc"
+            Width="300"
+            MaxPage="4"
+            MinPage="1"
+            Grid.Column="0"
+            Grid.Row="2"
+            ></view:PaginationControl>
         <Button x:Name="btnDelete"
                 Margin="20"
-                Grid.Row="2" Grid.Column="0" Click="btnDelete_Click">
+                Grid.Row="3" Grid.Column="0" Click="btnDelete_Click">
             <SymbolIcon Symbol="Delete"></SymbolIcon>
         </Button>
                 

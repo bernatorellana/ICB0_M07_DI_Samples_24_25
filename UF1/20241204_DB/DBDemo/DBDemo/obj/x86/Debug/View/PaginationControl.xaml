@@ -10,11 +10,14 @@
         <HyperlinkButton x:ConnectionId='2'
             x:Name="PreviousPageButton"
                                             
+            Margin="0,0,20,0"
             Content="&lt; Prev" />
         <TextBlock
             VerticalAlignment="Center"
             Text="Page" />
         <TextBox x:ConnectionId='3' 
+            IsEnabled="False"
+            HorizontalAlignment="Center"
                                              
                                                                                           />
         <TextBlock
@@ -26,6 +29,7 @@
         <HyperlinkButton x:ConnectionId='5'
             x:Name="NextPageButton"
                                         
+            Margin="20,0,0,0"
             Content="Next &gt;" />
     </StackPanel>
 
