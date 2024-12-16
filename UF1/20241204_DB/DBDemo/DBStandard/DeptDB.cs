@@ -190,8 +190,9 @@ namespace DB
                         consulta.CommandText = @"
                             select last_id from ids where table_name='dept' for update
                             ";
+                        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                         consulta.Transaction = transaction;
-                        int last_id = (int)consulta.ExecuteScalar();
+                        decimal last_id = (decimal)consulta.ExecuteScalar();
                         last_id += 10;
 
                         // query SQL
@@ -199,11 +200,9 @@ namespace DB
                             insert into dept (dept_no, dnom, loc) values (@dept_no, @dnom, @loc)
                         ";
 
-                        // NO US LA DEIXEU SI US PLAU !
-                        consulta.Transaction = transaction;
+                     
 
-
-                        DbUtils.createParam(consulta, "dept_no", last_id, System.Data.DbType.Int32);
+                        DbUtils.createParam(consulta, "dept_no", last_id, System.Data.DbType.Decimal);
                         DbUtils.createParam(consulta, "dnom", d.DName, System.Data.DbType.String);
                         DbUtils.createParam(consulta, "loc", d.Loc, System.Data.DbType.String);
 

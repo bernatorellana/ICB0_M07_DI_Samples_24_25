@@ -59,7 +59,9 @@ namespace DBDemo
                         dtgDepts.SelectedItem = null;
                         txbLoc.Text = "";
                         txbNom.Text = "";
-                        txbNum.Text = "";                        
+                        txbNum.Text = "";
+                        txbNom.IsEnabled = true;
+                        txbLoc.IsEnabled = true;
                         break;
 
                     case Mode.INICIAL:
@@ -71,14 +73,19 @@ namespace DBDemo
                         txbLoc.Text = "";
                         txbNom.Text = "";
                         txbNum.Text = "";
+                        txbNom.IsEnabled = false;
+                        txbLoc.IsEnabled = false;
+
                         break;
 
                     case Mode.MODIFICACIO:
                         btnAdd.Visibility = Visibility.Collapsed;
                         btnCancel.Visibility = Visibility.Visible;
                         btnSave.Visibility = Visibility.Visible;
+                        txbNom.IsEnabled = true;
+                        txbLoc.IsEnabled = true;
                         break;
-
+                    
                 }
             }
         }
