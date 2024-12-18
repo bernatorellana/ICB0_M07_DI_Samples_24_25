@@ -22,6 +22,7 @@
         <TextBox x:ConnectionId='2' x:Name="txbCount" Grid.Row="0" Grid.Column="0"></TextBox>
         <controls:DataGrid x:ConnectionId='3'                                              x:Name="dtgDepts" Grid.Row="1" Grid.Column="0"></controls:DataGrid>
         <view:PaginationControl x:ConnectionId='4'
+                                         
             x:Name="pgc"
             Width="300"
             MaxPage="4"

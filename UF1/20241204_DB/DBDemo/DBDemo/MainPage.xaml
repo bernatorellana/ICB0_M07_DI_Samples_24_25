@@ -22,6 +22,7 @@
         <TextBox x:Name="txbCount" Grid.Row="0" Grid.Column="0"></TextBox>
         <controls:DataGrid SelectionChanged="dtgDepts_SelectionChanged" x:Name="dtgDepts" Grid.Row="1" Grid.Column="0"></controls:DataGrid>
         <view:PaginationControl
+            PageChanged="pgc_PageChanged"
             x:Name="pgc"
             Width="300"
             MaxPage="4"

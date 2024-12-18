@@ -29,13 +29,18 @@ namespace DBDemo.View
             nameof(MinPage),
             typeof(int),
             typeof(PaginationControl),
-            new PropertyMetadata(1));
+            new PropertyMetadata(1, LimitChangedStatic));
+
+        private static void LimitChangedStatic(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            (d as PaginationControl).UpdateButtons();
+        }
 
         public static readonly DependencyProperty MaxPageProperty = DependencyProperty.Register(
             nameof(MaxPage),
             typeof(int),
             typeof(PaginationControl),
-            new PropertyMetadata(1));
+            new PropertyMetadata(1, LimitChangedStatic));
 
         public static readonly DependencyProperty CurrentPageProperty = DependencyProperty.Register(
             nameof(CurrentPage),

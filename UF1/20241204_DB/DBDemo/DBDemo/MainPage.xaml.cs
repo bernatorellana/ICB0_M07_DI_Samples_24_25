@@ -32,7 +32,7 @@ namespace DBDemo
     {
 
 
-        private const int ITEMS_PER_PAGE = 2;
+        private const int ITEMS_PER_PAGE = 4;
 
         private enum Mode
         {
@@ -107,7 +107,9 @@ namespace DBDemo
 
             int numPage = (int)MathF.Ceiling(numDept / (float)ITEMS_PER_PAGE);
             pgc.MaxPage = numPage;
-            pgc.MinPage = 1;
+            pgc.MinPage = Math.Min(numPage, 1);
+            pgc.CurrentPage = Math.Min(pgc.MaxPage, pgc.CurrentPage);
+            pgc.CurrentPage = Math.Max(pgc.MinPage, pgc.CurrentPage);
 
             List<Dept> departaments = DeptDB.GetDepts(pgc.CurrentPage,ITEMS_PER_PAGE);
             dtgDepts.ItemsSource = departaments;
@@ -181,6 +183,11 @@ namespace DBDemo
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             ModeActual = Mode.INICIAL;
+        }
+
+        private void pgc_PageChanged(View.PaginationControl sender, EventArgs args)
+        {
+            loadDepartaments();
         }
     }
 }

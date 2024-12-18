@@ -33,7 +33,16 @@ namespace DB
             }
         }
 
-        public static List<Dept> GetDepts()
+        private const int SENSE_LIMIT = -1;
+
+        public static List<Dept> GetDepts( )
+        {
+            return GetDepts(SENSE_LIMIT, 0);
+        }
+
+        public static List<Dept> GetDepts(
+            int currentPage, int iTEMS_PER_PAGE 
+            )
         {
             List<Dept> departaments = new List<Dept>();
             using (MySQLDBContext context = new MySQLDBContext())
@@ -50,6 +59,14 @@ namespace DB
                         // query SQL
                         consulta.CommandText = @"select *  
                                                 from dept ";
+
+                        if(currentPage > 0 )
+                        {
+                            int primerItem = (currentPage-1) * iTEMS_PER_PAGE;
+                            consulta.CommandText += $" limit {iTEMS_PER_PAGE} offset {primerItem}"; 
+                        }
+
+
                         var reader = consulta.ExecuteReader();
                         while (reader.Read()) // per cada Read() avancem una fila en els resultats de la consulta.
                         {
@@ -237,9 +254,6 @@ namespace DB
             }
         }
 
-        public static List<Dept> GetDepts(int currentPage, int iTEMS_PER_PAGE)
-        {
-            throw new NotImplementedException();
-        }
+  
     }
 }

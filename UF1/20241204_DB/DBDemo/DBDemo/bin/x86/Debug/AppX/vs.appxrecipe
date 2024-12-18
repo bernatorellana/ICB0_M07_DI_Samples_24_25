@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2024-12-16T18:25:03.079</Modified>
+      <Modified>2024-12-18T20:23:30.325</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\DBDemo.exe">
       <PackagePath>entrypoint\DBDemo.exe</PackagePath>
-      <Modified>2024-12-16T18:25:02.793</Modified>
+      <Modified>2024-12-18T20:23:29.987</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\.nuget\packages\microsoft.bcl.asyncinterfaces\1.1.1\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll">
       <PackagePath>Microsoft.Bcl.AsyncInterfaces.dll</PackagePath>
@@ -140,11 +140,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBStandard\bin\Debug\netstandard2.0\DBStandard.dll">
       <PackagePath>DBStandard.dll</PackagePath>
-      <Modified>2024-12-16T18:13:10.684</Modified>
+      <Modified>2024-12-18T20:20:27.692</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\ModelEstandard\bin\Debug\netstandard2.0\ModelEstandard.dll">
       <PackagePath>ModelEstandard.dll</PackagePath>
-      <Modified>2024-12-16T18:13:10.587</Modified>
+      <Modified>2024-12-16T18:29:52.310</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\5.1.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
@@ -194,19 +194,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\DBDemo.xr.xml">
       <PackagePath>DBDemo.xr.xml</PackagePath>
-      <Modified>2024-12-16T18:25:02.666</Modified>
+      <Modified>2024-12-18T20:03:44.015</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2024-12-16T18:25:02.670</Modified>
+      <Modified>2024-12-18T20:23:29.859</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2024-12-16T18:25:02.670</Modified>
+      <Modified>2024-12-18T20:23:29.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\View\PaginationControl.xbf">
       <PackagePath>View\PaginationControl.xbf</PackagePath>
-      <Modified>2024-12-16T18:25:02.670</Modified>
+      <Modified>2024-12-18T20:23:29.860</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -214,11 +214,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2024-12-16T18:13:13.042</Modified>
+      <Modified>2024-12-16T18:29:54.784</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20241204_DB\DBDemo\DBDemo\bin\x86\Debug\Core\DBDemo.exe">
       <PackagePath>DBDemo.exe</PackagePath>
-      <Modified>2024-12-16T18:25:03.077</Modified>
+      <Modified>2024-12-18T20:23:30.324</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
