@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 
 namespace DemoMVVM.ViewModel
 {
-    internal class MainPageViewModel : INotifyPropertyChanged
+    internal class MainPageViewModel : BaseViewModel
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+
+        public PersonaViewModel PersonaSeleccionada { get; set; }
 
 
-		private ObservableCollection<Persona> persones;
+        private ObservableCollection<PersonaViewModel> persones;
 
-		public ObservableCollection<Persona> Persones
+		public ObservableCollection<PersonaViewModel> Persones
 		{
 			get { return persones; }
             set { persones = value; }
@@ -25,7 +26,11 @@ namespace DemoMVVM.ViewModel
         
         public MainPageViewModel()
         {
-                Persones = Persona.GetPersones();
+                Persones = new ObservableCollection<PersonaViewModel>( 
+                    Persona.GetPersones().Select(
+                        p => new PersonaViewModel(p)
+                    )
+                );
         }
     }
 }

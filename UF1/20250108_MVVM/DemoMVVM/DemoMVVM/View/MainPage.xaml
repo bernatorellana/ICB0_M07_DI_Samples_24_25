@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DemoMVVM"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls" xmlns:view="using:DemoMVVM.View"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -14,6 +14,10 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <controls:DataGrid ItemsSource="{Binding Persones}" Grid.Column="0"></controls:DataGrid>
+        <controls:DataGrid
+            SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
+            ItemsSource="{Binding Persones}" Grid.Column="0"></controls:DataGrid>
+
+        <view:UCEditPersona  Grid.Column="1" LaPersona="{Binding PersonaSeleccionada }"/>
     </Grid>
 </Page>

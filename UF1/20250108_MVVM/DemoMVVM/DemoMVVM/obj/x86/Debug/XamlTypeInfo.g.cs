@@ -213,17 +213,17 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[34];
+            _typeNameTable = new string[38];
             _typeNameTable[0] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Control";
-            _typeNameTable[2] = "System.Collections.IEnumerable";
-            _typeNameTable[3] = "Windows.UI.Xaml.Media.Brush";
-            _typeNameTable[4] = "Boolean";
-            _typeNameTable[5] = "Windows.UI.Xaml.Style";
-            _typeNameTable[6] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode";
-            _typeNameTable[7] = "System.Enum";
-            _typeNameTable[8] = "System.ValueType";
-            _typeNameTable[9] = "Object";
+            _typeNameTable[2] = "Object";
+            _typeNameTable[3] = "System.Collections.IEnumerable";
+            _typeNameTable[4] = "Windows.UI.Xaml.Media.Brush";
+            _typeNameTable[5] = "Boolean";
+            _typeNameTable[6] = "Windows.UI.Xaml.Style";
+            _typeNameTable[7] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode";
+            _typeNameTable[8] = "System.Enum";
+            _typeNameTable[9] = "System.ValueType";
             _typeNameTable[10] = "Double";
             _typeNameTable[11] = "Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength";
             _typeNameTable[12] = "Int32";
@@ -245,21 +245,25 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
             _typeNameTable[28] = "System.Collections.ObjectModel.ObservableCollection`1<Windows.UI.Xaml.Style>";
             _typeNameTable[29] = "System.Collections.ObjectModel.Collection`1<Windows.UI.Xaml.Style>";
             _typeNameTable[30] = "System.Collections.IList";
-            _typeNameTable[31] = "DemoMVVM.MainPage";
-            _typeNameTable[32] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[33] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[31] = "DemoMVVM.View.UCEditPersona";
+            _typeNameTable[32] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[33] = "DemoMVVM.ViewModel.PersonaViewModel";
+            _typeNameTable[34] = "DemoMVVM.ViewModel.BaseViewModel";
+            _typeNameTable[35] = "DemoMVVM.MainPage";
+            _typeNameTable[36] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[37] = "DemoMVVM.View.transformers.Sexe2RadioTransform";
 
-            _typeTable = new global::System.Type[34];
+            _typeTable = new global::System.Type[38];
             _typeTable[0] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Control);
-            _typeTable[2] = typeof(global::System.Collections.IEnumerable);
-            _typeTable[3] = typeof(global::Windows.UI.Xaml.Media.Brush);
-            _typeTable[4] = typeof(global::System.Boolean);
-            _typeTable[5] = typeof(global::Windows.UI.Xaml.Style);
-            _typeTable[6] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode);
-            _typeTable[7] = typeof(global::System.Enum);
-            _typeTable[8] = typeof(global::System.ValueType);
-            _typeTable[9] = typeof(global::System.Object);
+            _typeTable[2] = typeof(global::System.Object);
+            _typeTable[3] = typeof(global::System.Collections.IEnumerable);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Media.Brush);
+            _typeTable[5] = typeof(global::System.Boolean);
+            _typeTable[6] = typeof(global::Windows.UI.Xaml.Style);
+            _typeTable[7] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode);
+            _typeTable[8] = typeof(global::System.Enum);
+            _typeTable[9] = typeof(global::System.ValueType);
             _typeTable[10] = typeof(global::System.Double);
             _typeTable[11] = typeof(global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength);
             _typeTable[12] = typeof(global::System.Int32);
@@ -281,9 +285,13 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
             _typeTable[28] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>);
             _typeTable[29] = typeof(global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>);
             _typeTable[30] = typeof(global::System.Collections.IList);
-            _typeTable[31] = typeof(global::DemoMVVM.MainPage);
-            _typeTable[32] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[33] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[31] = typeof(global::DemoMVVM.View.UCEditPersona);
+            _typeTable[32] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[33] = typeof(global::DemoMVVM.ViewModel.PersonaViewModel);
+            _typeTable[34] = typeof(global::DemoMVVM.ViewModel.BaseViewModel);
+            _typeTable[35] = typeof(global::DemoMVVM.MainPage);
+            _typeTable[36] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[37] = typeof(global::DemoMVVM.View.transformers.Sexe2RadioTransform);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -323,7 +331,10 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
         private object Activate_21_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>(); }
         private object Activate_28_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>(); }
         private object Activate_29_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>(); }
-        private object Activate_31_MainPage() { return new global::DemoMVVM.MainPage(); }
+        private object Activate_31_UCEditPersona() { return new global::DemoMVVM.View.UCEditPersona(); }
+        private object Activate_34_BaseViewModel() { return new global::DemoMVVM.ViewModel.BaseViewModel(); }
+        private object Activate_35_MainPage() { return new global::DemoMVVM.MainPage(); }
+        private object Activate_37_Sexe2RadioTransform() { return new global::DemoMVVM.View.transformers.Sexe2RadioTransform(); }
         private void VectorAdd_20_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridColumn>)instance;
@@ -362,6 +373,7 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
             case 0:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGrid
                 userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Control"));
                 userType.Activator = Activate_0_DataGrid;
+                userType.AddMemberName("SelectedItem");
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("AlternatingRowBackground");
                 userType.AddMemberName("AlternatingRowForeground");
@@ -400,7 +412,6 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
                 userType.AddMemberName("RowStyle");
                 userType.AddMemberName("SelectionMode");
                 userType.AddMemberName("SelectedIndex");
-                userType.AddMemberName("SelectedItem");
                 userType.AddMemberName("VerticalGridLinesBrush");
                 userType.AddMemberName("VerticalScrollBarVisibility");
                 userType.AddMemberName("Columns");
@@ -415,25 +426,29 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
                 xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  System.Collections.IEnumerable
+            case 2:   //  Object
+                xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  System.Collections.IEnumerable
                 userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 3:   //  Windows.UI.Xaml.Media.Brush
+            case 4:   //  Windows.UI.Xaml.Media.Brush
                 xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  Boolean
+            case 5:   //  Boolean
                 xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  Windows.UI.Xaml.Style
+            case 6:   //  Windows.UI.Xaml.Style
                 xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode
+            case 7:   //  Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode
                 userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("None", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode.None);
                 userType.AddEnumValue("ExcludeHeader", global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode.ExcludeHeader);
@@ -441,18 +456,14 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 7:   //  System.Enum
+            case 8:   //  System.Enum
                 userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 8:   //  System.ValueType
+            case 9:   //  System.ValueType
                 userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
-                break;
-
-            case 9:   //  Object
-                xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 10:   //  Double
@@ -595,19 +606,49 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 31:   //  DemoMVVM.MainPage
-                userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_31_MainPage;
+            case 31:   //  DemoMVVM.View.UCEditPersona
+                userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_31_UCEditPersona;
+                userType.AddMemberName("LaPersona");
+                userType.AddMemberName("PersonaEnEdicio");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Windows.UI.Xaml.Controls.Page
+            case 32:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 33:   //  Windows.UI.Xaml.Controls.UserControl
+            case 33:   //  DemoMVVM.ViewModel.PersonaViewModel
+                userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("DemoMVVM.ViewModel.BaseViewModel"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 34:   //  DemoMVVM.ViewModel.BaseViewModel
+                userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_34_BaseViewModel;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 35:   //  DemoMVVM.MainPage
+                userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_35_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 36:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 37:   //  DemoMVVM.View.transformers.Sexe2RadioTransform
+                userType = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_37_Sexe2RadioTransform;
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;
@@ -668,390 +709,390 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
             return foundXamlType;
         }
 
-        private object get_0_DataGrid_ItemsSource(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.ItemsSource;
-        }
-        private void set_0_DataGrid_ItemsSource(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.ItemsSource = (global::System.Collections.IEnumerable)Value;
-        }
-        private object get_1_DataGrid_AlternatingRowBackground(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.AlternatingRowBackground;
-        }
-        private void set_1_DataGrid_AlternatingRowBackground(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.AlternatingRowBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_2_DataGrid_AlternatingRowForeground(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.AlternatingRowForeground;
-        }
-        private void set_2_DataGrid_AlternatingRowForeground(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.AlternatingRowForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_3_DataGrid_AreRowDetailsFrozen(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.AreRowDetailsFrozen;
-        }
-        private void set_3_DataGrid_AreRowDetailsFrozen(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.AreRowDetailsFrozen = (global::System.Boolean)Value;
-        }
-        private object get_4_DataGrid_AreRowGroupHeadersFrozen(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.AreRowGroupHeadersFrozen;
-        }
-        private void set_4_DataGrid_AreRowGroupHeadersFrozen(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.AreRowGroupHeadersFrozen = (global::System.Boolean)Value;
-        }
-        private object get_5_DataGrid_AutoGenerateColumns(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.AutoGenerateColumns;
-        }
-        private void set_5_DataGrid_AutoGenerateColumns(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.AutoGenerateColumns = (global::System.Boolean)Value;
-        }
-        private object get_6_DataGrid_CanUserReorderColumns(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.CanUserReorderColumns;
-        }
-        private void set_6_DataGrid_CanUserReorderColumns(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.CanUserReorderColumns = (global::System.Boolean)Value;
-        }
-        private object get_7_DataGrid_CanUserResizeColumns(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.CanUserResizeColumns;
-        }
-        private void set_7_DataGrid_CanUserResizeColumns(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.CanUserResizeColumns = (global::System.Boolean)Value;
-        }
-        private object get_8_DataGrid_CanUserSortColumns(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.CanUserSortColumns;
-        }
-        private void set_8_DataGrid_CanUserSortColumns(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.CanUserSortColumns = (global::System.Boolean)Value;
-        }
-        private object get_9_DataGrid_CellStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.CellStyle;
-        }
-        private void set_9_DataGrid_CellStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.CellStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_10_DataGrid_ClipboardCopyMode(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.ClipboardCopyMode;
-        }
-        private void set_10_DataGrid_ClipboardCopyMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.ClipboardCopyMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode)Value;
-        }
-        private object get_11_DataGrid_ColumnHeaderHeight(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.ColumnHeaderHeight;
-        }
-        private void set_11_DataGrid_ColumnHeaderHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.ColumnHeaderHeight = (global::System.Double)Value;
-        }
-        private object get_12_DataGrid_ColumnHeaderStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.ColumnHeaderStyle;
-        }
-        private void set_12_DataGrid_ColumnHeaderStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.ColumnHeaderStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_13_DataGrid_ColumnWidth(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.ColumnWidth;
-        }
-        private void set_13_DataGrid_ColumnWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.ColumnWidth = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength)Value;
-        }
-        private object get_14_DataGrid_DataFetchSize(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.DataFetchSize;
-        }
-        private void set_14_DataGrid_DataFetchSize(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.DataFetchSize = (global::System.Double)Value;
-        }
-        private object get_15_DataGrid_DragIndicatorStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.DragIndicatorStyle;
-        }
-        private void set_15_DataGrid_DragIndicatorStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.DragIndicatorStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_16_DataGrid_DropLocationIndicatorStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.DropLocationIndicatorStyle;
-        }
-        private void set_16_DataGrid_DropLocationIndicatorStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.DropLocationIndicatorStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_17_DataGrid_FrozenColumnCount(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.FrozenColumnCount;
-        }
-        private void set_17_DataGrid_FrozenColumnCount(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.FrozenColumnCount = (global::System.Int32)Value;
-        }
-        private object get_18_DataGrid_GridLinesVisibility(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.GridLinesVisibility;
-        }
-        private void set_18_DataGrid_GridLinesVisibility(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.GridLinesVisibility = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility)Value;
-        }
-        private object get_19_DataGrid_HeadersVisibility(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.HeadersVisibility;
-        }
-        private void set_19_DataGrid_HeadersVisibility(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.HeadersVisibility = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility)Value;
-        }
-        private object get_20_DataGrid_HorizontalGridLinesBrush(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.HorizontalGridLinesBrush;
-        }
-        private void set_20_DataGrid_HorizontalGridLinesBrush(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.HorizontalGridLinesBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_21_DataGrid_HorizontalScrollBarVisibility(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.HorizontalScrollBarVisibility;
-        }
-        private void set_21_DataGrid_HorizontalScrollBarVisibility(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.HorizontalScrollBarVisibility = (global::Windows.UI.Xaml.Controls.ScrollBarVisibility)Value;
-        }
-        private object get_22_DataGrid_IsReadOnly(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.IsReadOnly;
-        }
-        private void set_22_DataGrid_IsReadOnly(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.IsReadOnly = (global::System.Boolean)Value;
-        }
-        private object get_23_DataGrid_IsValid(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.IsValid;
-        }
-        private object get_24_DataGrid_IncrementalLoadingThreshold(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.IncrementalLoadingThreshold;
-        }
-        private void set_24_DataGrid_IncrementalLoadingThreshold(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.IncrementalLoadingThreshold = (global::System.Double)Value;
-        }
-        private object get_25_DataGrid_IncrementalLoadingTrigger(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.IncrementalLoadingTrigger;
-        }
-        private void set_25_DataGrid_IncrementalLoadingTrigger(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.IncrementalLoadingTrigger = (global::Windows.UI.Xaml.Controls.IncrementalLoadingTrigger)Value;
-        }
-        private object get_26_DataGrid_MaxColumnWidth(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.MaxColumnWidth;
-        }
-        private void set_26_DataGrid_MaxColumnWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.MaxColumnWidth = (global::System.Double)Value;
-        }
-        private object get_27_DataGrid_MinColumnWidth(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.MinColumnWidth;
-        }
-        private void set_27_DataGrid_MinColumnWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.MinColumnWidth = (global::System.Double)Value;
-        }
-        private object get_28_DataGrid_RowBackground(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowBackground;
-        }
-        private void set_28_DataGrid_RowBackground(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_29_DataGrid_RowDetailsTemplate(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowDetailsTemplate;
-        }
-        private void set_29_DataGrid_RowDetailsTemplate(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowDetailsTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
-        }
-        private object get_30_DataGrid_RowDetailsVisibilityMode(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowDetailsVisibilityMode;
-        }
-        private void set_30_DataGrid_RowDetailsVisibilityMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowDetailsVisibilityMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode)Value;
-        }
-        private object get_31_DataGrid_RowForeground(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowForeground;
-        }
-        private void set_31_DataGrid_RowForeground(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
-        }
-        private object get_32_DataGrid_RowHeight(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowHeight;
-        }
-        private void set_32_DataGrid_RowHeight(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowHeight = (global::System.Double)Value;
-        }
-        private object get_33_DataGrid_RowHeaderWidth(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowHeaderWidth;
-        }
-        private void set_33_DataGrid_RowHeaderWidth(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowHeaderWidth = (global::System.Double)Value;
-        }
-        private object get_34_DataGrid_RowHeaderStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowHeaderStyle;
-        }
-        private void set_34_DataGrid_RowHeaderStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowHeaderStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_35_DataGrid_RowStyle(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.RowStyle;
-        }
-        private void set_35_DataGrid_RowStyle(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.RowStyle = (global::Windows.UI.Xaml.Style)Value;
-        }
-        private object get_36_DataGrid_SelectionMode(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.SelectionMode;
-        }
-        private void set_36_DataGrid_SelectionMode(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.SelectionMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode)Value;
-        }
-        private object get_37_DataGrid_SelectedIndex(object instance)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            return that.SelectedIndex;
-        }
-        private void set_37_DataGrid_SelectedIndex(object instance, object Value)
-        {
-            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
-            that.SelectedIndex = (global::System.Int32)Value;
-        }
-        private object get_38_DataGrid_SelectedItem(object instance)
+        private object get_0_DataGrid_SelectedItem(object instance)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.SelectedItem;
         }
-        private void set_38_DataGrid_SelectedItem(object instance, object Value)
+        private void set_0_DataGrid_SelectedItem(object instance, object Value)
         {
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             that.SelectedItem = (global::System.Object)Value;
+        }
+        private object get_1_DataGrid_ItemsSource(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.ItemsSource;
+        }
+        private void set_1_DataGrid_ItemsSource(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.ItemsSource = (global::System.Collections.IEnumerable)Value;
+        }
+        private object get_2_DataGrid_AlternatingRowBackground(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.AlternatingRowBackground;
+        }
+        private void set_2_DataGrid_AlternatingRowBackground(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.AlternatingRowBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_3_DataGrid_AlternatingRowForeground(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.AlternatingRowForeground;
+        }
+        private void set_3_DataGrid_AlternatingRowForeground(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.AlternatingRowForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_4_DataGrid_AreRowDetailsFrozen(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.AreRowDetailsFrozen;
+        }
+        private void set_4_DataGrid_AreRowDetailsFrozen(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.AreRowDetailsFrozen = (global::System.Boolean)Value;
+        }
+        private object get_5_DataGrid_AreRowGroupHeadersFrozen(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.AreRowGroupHeadersFrozen;
+        }
+        private void set_5_DataGrid_AreRowGroupHeadersFrozen(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.AreRowGroupHeadersFrozen = (global::System.Boolean)Value;
+        }
+        private object get_6_DataGrid_AutoGenerateColumns(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.AutoGenerateColumns;
+        }
+        private void set_6_DataGrid_AutoGenerateColumns(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.AutoGenerateColumns = (global::System.Boolean)Value;
+        }
+        private object get_7_DataGrid_CanUserReorderColumns(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.CanUserReorderColumns;
+        }
+        private void set_7_DataGrid_CanUserReorderColumns(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.CanUserReorderColumns = (global::System.Boolean)Value;
+        }
+        private object get_8_DataGrid_CanUserResizeColumns(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.CanUserResizeColumns;
+        }
+        private void set_8_DataGrid_CanUserResizeColumns(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.CanUserResizeColumns = (global::System.Boolean)Value;
+        }
+        private object get_9_DataGrid_CanUserSortColumns(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.CanUserSortColumns;
+        }
+        private void set_9_DataGrid_CanUserSortColumns(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.CanUserSortColumns = (global::System.Boolean)Value;
+        }
+        private object get_10_DataGrid_CellStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.CellStyle;
+        }
+        private void set_10_DataGrid_CellStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.CellStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_11_DataGrid_ClipboardCopyMode(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.ClipboardCopyMode;
+        }
+        private void set_11_DataGrid_ClipboardCopyMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.ClipboardCopyMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode)Value;
+        }
+        private object get_12_DataGrid_ColumnHeaderHeight(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.ColumnHeaderHeight;
+        }
+        private void set_12_DataGrid_ColumnHeaderHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.ColumnHeaderHeight = (global::System.Double)Value;
+        }
+        private object get_13_DataGrid_ColumnHeaderStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.ColumnHeaderStyle;
+        }
+        private void set_13_DataGrid_ColumnHeaderStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.ColumnHeaderStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_14_DataGrid_ColumnWidth(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.ColumnWidth;
+        }
+        private void set_14_DataGrid_ColumnWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.ColumnWidth = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength)Value;
+        }
+        private object get_15_DataGrid_DataFetchSize(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.DataFetchSize;
+        }
+        private void set_15_DataGrid_DataFetchSize(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.DataFetchSize = (global::System.Double)Value;
+        }
+        private object get_16_DataGrid_DragIndicatorStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.DragIndicatorStyle;
+        }
+        private void set_16_DataGrid_DragIndicatorStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.DragIndicatorStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_17_DataGrid_DropLocationIndicatorStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.DropLocationIndicatorStyle;
+        }
+        private void set_17_DataGrid_DropLocationIndicatorStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.DropLocationIndicatorStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_18_DataGrid_FrozenColumnCount(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.FrozenColumnCount;
+        }
+        private void set_18_DataGrid_FrozenColumnCount(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.FrozenColumnCount = (global::System.Int32)Value;
+        }
+        private object get_19_DataGrid_GridLinesVisibility(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.GridLinesVisibility;
+        }
+        private void set_19_DataGrid_GridLinesVisibility(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.GridLinesVisibility = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility)Value;
+        }
+        private object get_20_DataGrid_HeadersVisibility(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.HeadersVisibility;
+        }
+        private void set_20_DataGrid_HeadersVisibility(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.HeadersVisibility = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility)Value;
+        }
+        private object get_21_DataGrid_HorizontalGridLinesBrush(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.HorizontalGridLinesBrush;
+        }
+        private void set_21_DataGrid_HorizontalGridLinesBrush(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.HorizontalGridLinesBrush = (global::Windows.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_22_DataGrid_HorizontalScrollBarVisibility(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.HorizontalScrollBarVisibility;
+        }
+        private void set_22_DataGrid_HorizontalScrollBarVisibility(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.HorizontalScrollBarVisibility = (global::Windows.UI.Xaml.Controls.ScrollBarVisibility)Value;
+        }
+        private object get_23_DataGrid_IsReadOnly(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.IsReadOnly;
+        }
+        private void set_23_DataGrid_IsReadOnly(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.IsReadOnly = (global::System.Boolean)Value;
+        }
+        private object get_24_DataGrid_IsValid(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.IsValid;
+        }
+        private object get_25_DataGrid_IncrementalLoadingThreshold(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.IncrementalLoadingThreshold;
+        }
+        private void set_25_DataGrid_IncrementalLoadingThreshold(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.IncrementalLoadingThreshold = (global::System.Double)Value;
+        }
+        private object get_26_DataGrid_IncrementalLoadingTrigger(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.IncrementalLoadingTrigger;
+        }
+        private void set_26_DataGrid_IncrementalLoadingTrigger(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.IncrementalLoadingTrigger = (global::Windows.UI.Xaml.Controls.IncrementalLoadingTrigger)Value;
+        }
+        private object get_27_DataGrid_MaxColumnWidth(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.MaxColumnWidth;
+        }
+        private void set_27_DataGrid_MaxColumnWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.MaxColumnWidth = (global::System.Double)Value;
+        }
+        private object get_28_DataGrid_MinColumnWidth(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.MinColumnWidth;
+        }
+        private void set_28_DataGrid_MinColumnWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.MinColumnWidth = (global::System.Double)Value;
+        }
+        private object get_29_DataGrid_RowBackground(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowBackground;
+        }
+        private void set_29_DataGrid_RowBackground(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowBackground = (global::Windows.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_30_DataGrid_RowDetailsTemplate(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowDetailsTemplate;
+        }
+        private void set_30_DataGrid_RowDetailsTemplate(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowDetailsTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
+        }
+        private object get_31_DataGrid_RowDetailsVisibilityMode(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowDetailsVisibilityMode;
+        }
+        private void set_31_DataGrid_RowDetailsVisibilityMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowDetailsVisibilityMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode)Value;
+        }
+        private object get_32_DataGrid_RowForeground(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowForeground;
+        }
+        private void set_32_DataGrid_RowForeground(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowForeground = (global::Windows.UI.Xaml.Media.Brush)Value;
+        }
+        private object get_33_DataGrid_RowHeight(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowHeight;
+        }
+        private void set_33_DataGrid_RowHeight(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowHeight = (global::System.Double)Value;
+        }
+        private object get_34_DataGrid_RowHeaderWidth(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowHeaderWidth;
+        }
+        private void set_34_DataGrid_RowHeaderWidth(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowHeaderWidth = (global::System.Double)Value;
+        }
+        private object get_35_DataGrid_RowHeaderStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowHeaderStyle;
+        }
+        private void set_35_DataGrid_RowHeaderStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowHeaderStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_36_DataGrid_RowStyle(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.RowStyle;
+        }
+        private void set_36_DataGrid_RowStyle(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.RowStyle = (global::Windows.UI.Xaml.Style)Value;
+        }
+        private object get_37_DataGrid_SelectionMode(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.SelectionMode;
+        }
+        private void set_37_DataGrid_SelectionMode(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.SelectionMode = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode)Value;
+        }
+        private object get_38_DataGrid_SelectedIndex(object instance)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            return that.SelectedIndex;
+        }
+        private void set_38_DataGrid_SelectedIndex(object instance, object Value)
+        {
+            var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
+            that.SelectedIndex = (global::System.Int32)Value;
         }
         private object get_39_DataGrid_VerticalGridLinesBrush(object instance)
         {
@@ -1283,6 +1324,21 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
             var that = (global::Microsoft.Toolkit.Uwp.UI.Controls.DataGrid)instance;
             return that.SelectedItems;
         }
+        private object get_65_UCEditPersona_LaPersona(object instance)
+        {
+            var that = (global::DemoMVVM.View.UCEditPersona)instance;
+            return that.LaPersona;
+        }
+        private void set_65_UCEditPersona_LaPersona(object instance, object Value)
+        {
+            var that = (global::DemoMVVM.View.UCEditPersona)instance;
+            that.LaPersona = (global::DemoMVVM.ViewModel.PersonaViewModel)Value;
+        }
+        private object get_66_UCEditPersona_PersonaEnEdicio(object instance)
+        {
+            var that = (global::DemoMVVM.View.UCEditPersona)instance;
+            return that.PersonaEnEdicio;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -1291,278 +1347,278 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
 
             switch (longMemberName)
             {
+            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectedItem":
+                userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
+                xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_0_DataGrid_SelectedItem;
+                xamlMember.Setter = set_0_DataGrid_SelectedItem;
+                break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ItemsSource":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "ItemsSource", "System.Collections.IEnumerable");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_0_DataGrid_ItemsSource;
-                xamlMember.Setter = set_0_DataGrid_ItemsSource;
+                xamlMember.Getter = get_1_DataGrid_ItemsSource;
+                xamlMember.Setter = set_1_DataGrid_ItemsSource;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AlternatingRowBackground":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "AlternatingRowBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_1_DataGrid_AlternatingRowBackground;
-                xamlMember.Setter = set_1_DataGrid_AlternatingRowBackground;
+                xamlMember.Getter = get_2_DataGrid_AlternatingRowBackground;
+                xamlMember.Setter = set_2_DataGrid_AlternatingRowBackground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AlternatingRowForeground":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "AlternatingRowForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_DataGrid_AlternatingRowForeground;
-                xamlMember.Setter = set_2_DataGrid_AlternatingRowForeground;
+                xamlMember.Getter = get_3_DataGrid_AlternatingRowForeground;
+                xamlMember.Setter = set_3_DataGrid_AlternatingRowForeground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AreRowDetailsFrozen":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "AreRowDetailsFrozen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_DataGrid_AreRowDetailsFrozen;
-                xamlMember.Setter = set_3_DataGrid_AreRowDetailsFrozen;
+                xamlMember.Getter = get_4_DataGrid_AreRowDetailsFrozen;
+                xamlMember.Setter = set_4_DataGrid_AreRowDetailsFrozen;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AreRowGroupHeadersFrozen":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "AreRowGroupHeadersFrozen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_DataGrid_AreRowGroupHeadersFrozen;
-                xamlMember.Setter = set_4_DataGrid_AreRowGroupHeadersFrozen;
+                xamlMember.Getter = get_5_DataGrid_AreRowGroupHeadersFrozen;
+                xamlMember.Setter = set_5_DataGrid_AreRowGroupHeadersFrozen;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.AutoGenerateColumns":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "AutoGenerateColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_5_DataGrid_AutoGenerateColumns;
-                xamlMember.Setter = set_5_DataGrid_AutoGenerateColumns;
+                xamlMember.Getter = get_6_DataGrid_AutoGenerateColumns;
+                xamlMember.Setter = set_6_DataGrid_AutoGenerateColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CanUserReorderColumns":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "CanUserReorderColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_6_DataGrid_CanUserReorderColumns;
-                xamlMember.Setter = set_6_DataGrid_CanUserReorderColumns;
+                xamlMember.Getter = get_7_DataGrid_CanUserReorderColumns;
+                xamlMember.Setter = set_7_DataGrid_CanUserReorderColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CanUserResizeColumns":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "CanUserResizeColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_7_DataGrid_CanUserResizeColumns;
-                xamlMember.Setter = set_7_DataGrid_CanUserResizeColumns;
+                xamlMember.Getter = get_8_DataGrid_CanUserResizeColumns;
+                xamlMember.Setter = set_8_DataGrid_CanUserResizeColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CanUserSortColumns":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "CanUserSortColumns", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_8_DataGrid_CanUserSortColumns;
-                xamlMember.Setter = set_8_DataGrid_CanUserSortColumns;
+                xamlMember.Getter = get_9_DataGrid_CanUserSortColumns;
+                xamlMember.Setter = set_9_DataGrid_CanUserSortColumns;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.CellStyle":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "CellStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_9_DataGrid_CellStyle;
-                xamlMember.Setter = set_9_DataGrid_CellStyle;
+                xamlMember.Getter = get_10_DataGrid_CellStyle;
+                xamlMember.Setter = set_10_DataGrid_CellStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ClipboardCopyMode":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "ClipboardCopyMode", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridClipboardCopyMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_10_DataGrid_ClipboardCopyMode;
-                xamlMember.Setter = set_10_DataGrid_ClipboardCopyMode;
+                xamlMember.Getter = get_11_DataGrid_ClipboardCopyMode;
+                xamlMember.Setter = set_11_DataGrid_ClipboardCopyMode;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ColumnHeaderHeight":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "ColumnHeaderHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_11_DataGrid_ColumnHeaderHeight;
-                xamlMember.Setter = set_11_DataGrid_ColumnHeaderHeight;
+                xamlMember.Getter = get_12_DataGrid_ColumnHeaderHeight;
+                xamlMember.Setter = set_12_DataGrid_ColumnHeaderHeight;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ColumnHeaderStyle":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "ColumnHeaderStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_12_DataGrid_ColumnHeaderStyle;
-                xamlMember.Setter = set_12_DataGrid_ColumnHeaderStyle;
+                xamlMember.Getter = get_13_DataGrid_ColumnHeaderStyle;
+                xamlMember.Setter = set_13_DataGrid_ColumnHeaderStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.ColumnWidth":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "ColumnWidth", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridLength");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_13_DataGrid_ColumnWidth;
-                xamlMember.Setter = set_13_DataGrid_ColumnWidth;
+                xamlMember.Getter = get_14_DataGrid_ColumnWidth;
+                xamlMember.Setter = set_14_DataGrid_ColumnWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.DataFetchSize":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "DataFetchSize", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_14_DataGrid_DataFetchSize;
-                xamlMember.Setter = set_14_DataGrid_DataFetchSize;
+                xamlMember.Getter = get_15_DataGrid_DataFetchSize;
+                xamlMember.Setter = set_15_DataGrid_DataFetchSize;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.DragIndicatorStyle":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "DragIndicatorStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_15_DataGrid_DragIndicatorStyle;
-                xamlMember.Setter = set_15_DataGrid_DragIndicatorStyle;
+                xamlMember.Getter = get_16_DataGrid_DragIndicatorStyle;
+                xamlMember.Setter = set_16_DataGrid_DragIndicatorStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.DropLocationIndicatorStyle":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "DropLocationIndicatorStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_16_DataGrid_DropLocationIndicatorStyle;
-                xamlMember.Setter = set_16_DataGrid_DropLocationIndicatorStyle;
+                xamlMember.Getter = get_17_DataGrid_DropLocationIndicatorStyle;
+                xamlMember.Setter = set_17_DataGrid_DropLocationIndicatorStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.FrozenColumnCount":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "FrozenColumnCount", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_17_DataGrid_FrozenColumnCount;
-                xamlMember.Setter = set_17_DataGrid_FrozenColumnCount;
+                xamlMember.Getter = get_18_DataGrid_FrozenColumnCount;
+                xamlMember.Setter = set_18_DataGrid_FrozenColumnCount;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.GridLinesVisibility":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "GridLinesVisibility", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridGridLinesVisibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_18_DataGrid_GridLinesVisibility;
-                xamlMember.Setter = set_18_DataGrid_GridLinesVisibility;
+                xamlMember.Getter = get_19_DataGrid_GridLinesVisibility;
+                xamlMember.Setter = set_19_DataGrid_GridLinesVisibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.HeadersVisibility":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "HeadersVisibility", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridHeadersVisibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_19_DataGrid_HeadersVisibility;
-                xamlMember.Setter = set_19_DataGrid_HeadersVisibility;
+                xamlMember.Getter = get_20_DataGrid_HeadersVisibility;
+                xamlMember.Setter = set_20_DataGrid_HeadersVisibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.HorizontalGridLinesBrush":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "HorizontalGridLinesBrush", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_20_DataGrid_HorizontalGridLinesBrush;
-                xamlMember.Setter = set_20_DataGrid_HorizontalGridLinesBrush;
+                xamlMember.Getter = get_21_DataGrid_HorizontalGridLinesBrush;
+                xamlMember.Setter = set_21_DataGrid_HorizontalGridLinesBrush;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.HorizontalScrollBarVisibility":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "HorizontalScrollBarVisibility", "Windows.UI.Xaml.Controls.ScrollBarVisibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_21_DataGrid_HorizontalScrollBarVisibility;
-                xamlMember.Setter = set_21_DataGrid_HorizontalScrollBarVisibility;
+                xamlMember.Getter = get_22_DataGrid_HorizontalScrollBarVisibility;
+                xamlMember.Setter = set_22_DataGrid_HorizontalScrollBarVisibility;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.IsReadOnly":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "IsReadOnly", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_22_DataGrid_IsReadOnly;
-                xamlMember.Setter = set_22_DataGrid_IsReadOnly;
+                xamlMember.Getter = get_23_DataGrid_IsReadOnly;
+                xamlMember.Setter = set_23_DataGrid_IsReadOnly;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.IsValid":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "IsValid", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_23_DataGrid_IsValid;
+                xamlMember.Getter = get_24_DataGrid_IsValid;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.IncrementalLoadingThreshold":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "IncrementalLoadingThreshold", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_24_DataGrid_IncrementalLoadingThreshold;
-                xamlMember.Setter = set_24_DataGrid_IncrementalLoadingThreshold;
+                xamlMember.Getter = get_25_DataGrid_IncrementalLoadingThreshold;
+                xamlMember.Setter = set_25_DataGrid_IncrementalLoadingThreshold;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.IncrementalLoadingTrigger":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "IncrementalLoadingTrigger", "Windows.UI.Xaml.Controls.IncrementalLoadingTrigger");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_25_DataGrid_IncrementalLoadingTrigger;
-                xamlMember.Setter = set_25_DataGrid_IncrementalLoadingTrigger;
+                xamlMember.Getter = get_26_DataGrid_IncrementalLoadingTrigger;
+                xamlMember.Setter = set_26_DataGrid_IncrementalLoadingTrigger;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.MaxColumnWidth":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "MaxColumnWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_26_DataGrid_MaxColumnWidth;
-                xamlMember.Setter = set_26_DataGrid_MaxColumnWidth;
+                xamlMember.Getter = get_27_DataGrid_MaxColumnWidth;
+                xamlMember.Setter = set_27_DataGrid_MaxColumnWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.MinColumnWidth":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "MinColumnWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_27_DataGrid_MinColumnWidth;
-                xamlMember.Setter = set_27_DataGrid_MinColumnWidth;
+                xamlMember.Getter = get_28_DataGrid_MinColumnWidth;
+                xamlMember.Setter = set_28_DataGrid_MinColumnWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowBackground":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowBackground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_28_DataGrid_RowBackground;
-                xamlMember.Setter = set_28_DataGrid_RowBackground;
+                xamlMember.Getter = get_29_DataGrid_RowBackground;
+                xamlMember.Setter = set_29_DataGrid_RowBackground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowDetailsTemplate":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowDetailsTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_29_DataGrid_RowDetailsTemplate;
-                xamlMember.Setter = set_29_DataGrid_RowDetailsTemplate;
+                xamlMember.Getter = get_30_DataGrid_RowDetailsTemplate;
+                xamlMember.Setter = set_30_DataGrid_RowDetailsTemplate;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowDetailsVisibilityMode":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowDetailsVisibilityMode", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowDetailsVisibilityMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_30_DataGrid_RowDetailsVisibilityMode;
-                xamlMember.Setter = set_30_DataGrid_RowDetailsVisibilityMode;
+                xamlMember.Getter = get_31_DataGrid_RowDetailsVisibilityMode;
+                xamlMember.Setter = set_31_DataGrid_RowDetailsVisibilityMode;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowForeground":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowForeground", "Windows.UI.Xaml.Media.Brush");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_31_DataGrid_RowForeground;
-                xamlMember.Setter = set_31_DataGrid_RowForeground;
+                xamlMember.Getter = get_32_DataGrid_RowForeground;
+                xamlMember.Setter = set_32_DataGrid_RowForeground;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowHeight":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_32_DataGrid_RowHeight;
-                xamlMember.Setter = set_32_DataGrid_RowHeight;
+                xamlMember.Getter = get_33_DataGrid_RowHeight;
+                xamlMember.Setter = set_33_DataGrid_RowHeight;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowHeaderWidth":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowHeaderWidth", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_DataGrid_RowHeaderWidth;
-                xamlMember.Setter = set_33_DataGrid_RowHeaderWidth;
+                xamlMember.Getter = get_34_DataGrid_RowHeaderWidth;
+                xamlMember.Setter = set_34_DataGrid_RowHeaderWidth;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowHeaderStyle":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowHeaderStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_34_DataGrid_RowHeaderStyle;
-                xamlMember.Setter = set_34_DataGrid_RowHeaderStyle;
+                xamlMember.Getter = get_35_DataGrid_RowHeaderStyle;
+                xamlMember.Setter = set_35_DataGrid_RowHeaderStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.RowStyle":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "RowStyle", "Windows.UI.Xaml.Style");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_35_DataGrid_RowStyle;
-                xamlMember.Setter = set_35_DataGrid_RowStyle;
+                xamlMember.Getter = get_36_DataGrid_RowStyle;
+                xamlMember.Setter = set_36_DataGrid_RowStyle;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectionMode":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "SelectionMode", "Microsoft.Toolkit.Uwp.UI.Controls.DataGridSelectionMode");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_36_DataGrid_SelectionMode;
-                xamlMember.Setter = set_36_DataGrid_SelectionMode;
+                xamlMember.Getter = get_37_DataGrid_SelectionMode;
+                xamlMember.Setter = set_37_DataGrid_SelectionMode;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectedIndex":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "SelectedIndex", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_DataGrid_SelectedIndex;
-                xamlMember.Setter = set_37_DataGrid_SelectedIndex;
-                break;
-            case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.SelectedItem":
-                userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
-                xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "SelectedItem", "Object");
-                xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_38_DataGrid_SelectedItem;
-                xamlMember.Setter = set_38_DataGrid_SelectedItem;
+                xamlMember.Getter = get_38_DataGrid_SelectedIndex;
+                xamlMember.Setter = set_38_DataGrid_SelectedIndex;
                 break;
             case "Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.VerticalGridLinesBrush":
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
@@ -1720,6 +1776,19 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
                 userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Toolkit.Uwp.UI.Controls.DataGrid");
                 xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "SelectedItems", "System.Collections.IList");
                 xamlMember.Getter = get_64_DataGrid_SelectedItems;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "DemoMVVM.View.UCEditPersona.LaPersona":
+                userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DemoMVVM.View.UCEditPersona");
+                xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "LaPersona", "DemoMVVM.ViewModel.PersonaViewModel");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_65_UCEditPersona_LaPersona;
+                xamlMember.Setter = set_65_UCEditPersona_LaPersona;
+                break;
+            case "DemoMVVM.View.UCEditPersona.PersonaEnEdicio":
+                userType = (global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DemoMVVM.View.UCEditPersona");
+                xamlMember = new global::DemoMVVM.DemoMVVM_XamlTypeInfo.XamlMember(this, "PersonaEnEdicio", "DemoMVVM.ViewModel.PersonaViewModel");
+                xamlMember.Getter = get_66_UCEditPersona_PersonaEnEdicio;
                 xamlMember.SetIsReadOnly();
                 break;
             }

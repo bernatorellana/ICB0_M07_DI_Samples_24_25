@@ -9,6 +9,8 @@ namespace DB
 {
     internal class MySQLDBContext : DbContext
     {
+      
+        public DbSet<Post> Posts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
