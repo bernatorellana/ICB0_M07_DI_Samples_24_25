@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\DemoMVVM\DemoMVVM\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-01-16T16:44:41.241</Modified>
+      <Modified>2025-01-16T18:25:24.420</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\DemoMVVM\DemoMVVM\bin\x86\Debug\DemoMVVM.exe">
       <PackagePath>entrypoint\DemoMVVM.exe</PackagePath>
-      <Modified>2025-01-16T16:44:40.977</Modified>
+      <Modified>2025-01-16T18:25:24.161</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\5.1.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -94,19 +94,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\DemoMVVM\DemoMVVM\bin\x86\Debug\DemoMVVM.xr.xml">
       <PackagePath>DemoMVVM.xr.xml</PackagePath>
-      <Modified>2025-01-16T16:35:21.750</Modified>
+      <Modified>2025-01-16T18:16:03.040</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\DemoMVVM\DemoMVVM\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2025-01-16T16:44:40.841</Modified>
+      <Modified>2025-01-16T18:25:24.048</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\DemoMVVM\DemoMVVM\bin\x86\Debug\View\MainPage.xbf">
       <PackagePath>View\MainPage.xbf</PackagePath>
-      <Modified>2025-01-16T16:44:40.841</Modified>
+      <Modified>2025-01-16T18:25:24.048</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\DemoMVVM\DemoMVVM\bin\x86\Debug\View\UCEditPersona.xbf">
       <PackagePath>View\UCEditPersona.xbf</PackagePath>
-      <Modified>2025-01-16T16:44:40.841</Modified>
+      <Modified>2025-01-16T18:25:24.048</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -118,7 +118,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\DemoMVVM\DemoMVVM\bin\x86\Debug\Core\DemoMVVM.exe">
       <PackagePath>DemoMVVM.exe</PackagePath>
-      <Modified>2025-01-16T16:44:41.240</Modified>
+      <Modified>2025-01-16T18:25:24.418</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

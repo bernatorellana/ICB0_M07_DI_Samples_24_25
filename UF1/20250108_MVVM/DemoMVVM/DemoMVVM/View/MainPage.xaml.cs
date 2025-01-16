@@ -25,6 +25,8 @@ namespace DemoMVVM
     {
         MainPageViewModel viewModel;
 
+
+
         public MainPage()
         {
             this.InitializeComponent();

@@ -332,6 +332,7 @@ namespace DemoMVVM.DemoMVVM_XamlTypeInfo
         private object Activate_28_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::Windows.UI.Xaml.Style>(); }
         private object Activate_29_Collection() { return new global::System.Collections.ObjectModel.Collection<global::Windows.UI.Xaml.Style>(); }
         private object Activate_31_UCEditPersona() { return new global::DemoMVVM.View.UCEditPersona(); }
+        private object Activate_33_PersonaViewModel() { return new global::DemoMVVM.ViewModel.PersonaViewModel(); }
         private object Activate_34_BaseViewModel() { return new global::DemoMVVM.ViewModel.BaseViewModel(); }
         private object Activate_35_MainPage() { return new global::DemoMVVM.MainPage(); }
         private object Activate_37_Sexe2RadioTransform() { return new global::DemoMVVM.View.transformers.Sexe2RadioTransform(); }

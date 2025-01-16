@@ -50,10 +50,12 @@ namespace DemoMVVM.View
 
         private void OnPersonaChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
+            if(LaPersona==null) PersonaEnEdicio=null;
+            else
             if (PersonaEnEdicio == null || LaPersona.Id != PersonaEnEdicio.Id)
             {
                 PersonaEnEdicio = new PersonaViewModel(LaPersona);
-            }
+            }           
         }
 
         

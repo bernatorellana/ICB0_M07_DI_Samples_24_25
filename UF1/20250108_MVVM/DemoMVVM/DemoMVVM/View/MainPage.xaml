@@ -13,11 +13,21 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
 
-        <controls:DataGrid
+        <controls:DataGrid Grid.Row="0"
             SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
             ItemsSource="{Binding Persones}" Grid.Column="0"></controls:DataGrid>
 
-        <view:UCEditPersona  Grid.Column="1" LaPersona="{Binding PersonaSeleccionada }"/>
+        <view:UCEditPersona  Grid.Row="0"  Grid.Column="1" 
+                             Grid.RowSpan="2"
+                             LaPersona="{Binding PersonaSeleccionada }"/>
+
+        <Button  Grid.Row="1" Grid.Column="0" Margin="10"
+                 Click="{x:Bind viewModel.NewPerson}"
+                 HorizontalAlignment="Center">New</Button>
     </Grid>
 </Page>

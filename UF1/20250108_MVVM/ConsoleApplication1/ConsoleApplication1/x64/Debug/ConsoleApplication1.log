@@ -1,0 +1,5 @@
+﻿  ConsoleApplication1.cpp
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(36,17): error C3688: sufijo literal no válido 'O'; no se encontró el operador literal o la plantilla de operador literal 'operator ""O'
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(36,26): error C2143: error de sintaxis: falta ';' delante de 'cadena'
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(36,26): error C2059: error de sintaxis: 'cadena'
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250108_MVVM\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.cpp(55,32): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.

@@ -43,6 +43,17 @@ namespace DemoMVVM.ViewModel
             this.ImageURL = p.ImageURL;
             this.Edat = p.Edat+"";
          }
+
+        public PersonaViewModel()
+        {
+            this.Id = -1;
+            this.Nom = "";
+            this.Edat = "";
+            this.Sexe = SexeEnum.NO_DEFINIT;
+            this.ImageURL = "";
+            this.IsActiu= true;
+        }
+
         public int Id { get; set; }
         public String Nom { get; set; }
         public SexeEnum Sexe { get; set; }
@@ -62,18 +73,20 @@ namespace DemoMVVM.ViewModel
         {
             get
             {
-                return (Persona.ValidaEdat(Edat) && 
-                    Persona.ValidaNom(Nom));                    
+                return CancelVisibility==Visibility.Visible &&
+                        (Persona.ValidaEdat(Edat) && 
+                        Persona.ValidaNom(Nom));                    
             }
         }
 
         public Visibility CancelVisibility
         {
             get { return 
-                    !this.Nom.Equals(this.persona.Nom) ||
-                    !this.Edat.Equals(this.persona.Edat + "") ||
-                     this.IsActiu!=persona.Actiu ||
-                     this.Sexe!=persona.Sexe ? Visibility.Visible : Visibility.Collapsed;                                                            
+                    PersonaOriginal==null ||
+                    !this.Nom.Equals(this.PersonaOriginal.Nom) ||
+                    !this.Edat.Equals(this.PersonaOriginal.Edat + "") ||
+                     this.IsActiu!= PersonaOriginal.IsActiu ||
+                     this.Sexe!= PersonaOriginal.Sexe ? Visibility.Visible : Visibility.Collapsed;                                                            
                     }
         }
 
@@ -82,11 +95,24 @@ namespace DemoMVVM.ViewModel
         {
             get
             {
-                if (Persona.ValidaEdat(Edat))
-                    return new SolidColorBrush(Colors.White);
-                else return new SolidColorBrush(Colors.Red);
+                return createBooleanBrush(Persona.ValidaEdat(Edat));
             }
         }
+        public Brush NomBackground
+        {
+            get
+            {
+                return createBooleanBrush(Persona.ValidaNom(Nom));
+            }
+        }
+
+
+        private Brush createBooleanBrush(bool isOk)
+        {
+            if (isOk) return new SolidColorBrush(Colors.Green);
+            else return new SolidColorBrush(Colors.Red);
+        }
+
 
         public ArrayList ListSexe
         {
@@ -106,8 +132,6 @@ namespace DemoMVVM.ViewModel
 
         public void Save()
         {
-           
-
             PersonaOriginal.Nom = persona.Nom = this.Nom;
 
             int e;
@@ -119,16 +143,29 @@ namespace DemoMVVM.ViewModel
 
             PersonaOriginal.IsActiu = persona.Actiu = this.IsActiu;
             PersonaOriginal.Sexe    = persona.Sexe  = this.Sexe;
-
-            
             
             // Demanar a la UI que actualitzi l'estat del botó cancel i
             // del botó EsValida:
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CancelVisibility"));
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EsValida"));
-
+            
         }
 
+        public void Cancel()
+        {
+            this.Nom = PersonaOriginal.Nom;
+            this.Edat= PersonaOriginal.Edat;
+            this.IsActiu = PersonaOriginal.IsActiu;
+            this.Sexe= PersonaOriginal.Sexe;
+        }
+
+        public Visibility FormVisibility
+        {
+            get
+            {
+                return this.PersonaOriginal!=null?Visibility.Visible:Visibility.Collapsed;
+            }
+        }
 
     }
 }

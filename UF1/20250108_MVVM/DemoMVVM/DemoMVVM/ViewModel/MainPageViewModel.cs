@@ -34,5 +34,11 @@ namespace DemoMVVM.ViewModel
                     )
                 );
         }
+
+        public void NewPerson()
+        {
+            PersonaSeleccionada = new PersonaViewModel();
+            PersonaSeleccionada.PersonaOriginal = new PersonaViewModel();
+        }
     }
 }
