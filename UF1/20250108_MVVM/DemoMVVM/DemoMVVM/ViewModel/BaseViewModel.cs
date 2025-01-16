@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace DemoMVVM.ViewModel
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel 
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        
     }
 }

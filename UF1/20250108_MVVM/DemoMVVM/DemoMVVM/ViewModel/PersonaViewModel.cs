@@ -2,20 +2,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
 namespace DemoMVVM.ViewModel
 {
-    public class PersonaViewModel : BaseViewModel
+    public class PersonaViewModel : BaseViewModel, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
 
         private Persona persona;
+
+
+        public PersonaViewModel PersonaOriginal { get; set; }
+
+
         public PersonaViewModel(PersonaViewModel p)
         {
+            this.PersonaOriginal = p;
             this.Id = p.Id;
             this.persona = p.persona;
             this.Nom = p.Nom;
@@ -53,10 +62,21 @@ namespace DemoMVVM.ViewModel
         {
             get
             {
-                return (Persona.ValidaEdat(Edat) && Persona.ValidaNom(Nom));                    
+                return (Persona.ValidaEdat(Edat) && 
+                    Persona.ValidaNom(Nom));                    
             }
         }
-        
+
+        public Visibility CancelVisibility
+        {
+            get { return 
+                    !this.Nom.Equals(this.persona.Nom) ||
+                    !this.Edat.Equals(this.persona.Edat + "") ||
+                     this.IsActiu!=persona.Actiu ||
+                     this.Sexe!=persona.Sexe ? Visibility.Visible : Visibility.Collapsed;                                                            
+                    }
+        }
+
 
         public Brush EdatBackground
         {
@@ -82,6 +102,33 @@ namespace DemoMVVM.ViewModel
         }
 
         private static ArrayList listSexes;
+
+
+        public void Save()
+        {
+           
+
+            PersonaOriginal.Nom = persona.Nom = this.Nom;
+
+            int e;
+            if(int.TryParse(this.Edat, out e))
+            {
+                persona.Edat = e;
+                PersonaOriginal.Edat = this.Edat;
+            }
+
+            PersonaOriginal.IsActiu = persona.Actiu = this.IsActiu;
+            PersonaOriginal.Sexe    = persona.Sexe  = this.Sexe;
+
+            
+            
+            // Demanar a la UI que actualitzi l'estat del botó cancel i
+            // del botó EsValida:
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CancelVisibility"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("EsValida"));
+
+        }
+
 
     }
 }

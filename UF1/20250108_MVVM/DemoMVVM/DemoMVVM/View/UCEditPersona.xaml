@@ -85,7 +85,10 @@
                 ConverterParameter='N'}"
                 >No definit</RadioButton>
         </StackPanel>
-        <Button  Grid.Column="1" Grid.Row="6" Click="Button_Click"
+        <Button x:Name="btnCancel"  Grid.Column="0" Grid.Row="6" 
+                 Visibility="{Binding 
+                ElementName=root, Path=PersonaEnEdicio.CancelVisibility}">Cancel</Button>
+        <Button  Grid.Column="1" Grid.Row="6" Click="{x:Bind PersonaEnEdicio.Save}"
                  IsEnabled="{Binding 
                 ElementName=root, Path=PersonaEnEdicio.EsValida}">Save</Button>
 

@@ -9,8 +9,10 @@ using System.Threading.Tasks;
 
 namespace DemoMVVM.ViewModel
 {
-    internal class MainPageViewModel : BaseViewModel
+    internal class MainPageViewModel : BaseViewModel, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
 
         public PersonaViewModel PersonaSeleccionada { get; set; }
 

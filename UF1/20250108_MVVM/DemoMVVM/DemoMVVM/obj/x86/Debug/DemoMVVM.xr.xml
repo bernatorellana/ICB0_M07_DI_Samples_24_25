@@ -8,6 +8,7 @@
     <RootPropertyPathName Name="Persones" />
     <RootPropertyPathName Name="PersonaEnEdicio" />
     <RootPropertyPathName Name="EsValida" />
+    <RootPropertyPathName Name="CancelVisibility" />
     <RootPropertyPathName Name="Sexe" />
     <RootPropertyPathName Name="EdatError" />
     <RootPropertyPathName Name="Edat" />
@@ -87,10 +88,12 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Content" />
+      <RootProperty Name="IsEnabled" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="IsChecked" />
       <RootProperty Name="Content" />

@@ -56,12 +56,8 @@ namespace DemoMVVM.View
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            LaPersona.Nom = PersonaEnEdicio.Nom;
-            LaPersona.Edat = PersonaEnEdicio.Edat;
-            LaPersona.IsActiu = PersonaEnEdicio.IsActiu;
-            LaPersona.Sexe = PersonaEnEdicio.Sexe;
-        }
+        
+
+
     }
 }
