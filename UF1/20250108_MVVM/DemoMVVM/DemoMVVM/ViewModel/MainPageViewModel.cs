@@ -28,11 +28,16 @@ namespace DemoMVVM.ViewModel
         
         public MainPageViewModel()
         {
-                Persones = new ObservableCollection<PersonaViewModel>( 
-                    Persona.GetPersones().Select(
-                        p => new PersonaViewModel(p)
-                    )
-                );
+            LoadPersones();
+        }
+
+        public void LoadPersones()
+        {
+            Persones = new ObservableCollection<PersonaViewModel>(
+                                Persona.GetPersones().Select(
+                                    p => new PersonaViewModel(p)
+                                )
+                            );
         }
 
         public void NewPerson()
@@ -40,5 +45,7 @@ namespace DemoMVVM.ViewModel
             PersonaSeleccionada = new PersonaViewModel();
             PersonaSeleccionada.PersonaOriginal = new PersonaViewModel();
         }
+
+        
     }
 }

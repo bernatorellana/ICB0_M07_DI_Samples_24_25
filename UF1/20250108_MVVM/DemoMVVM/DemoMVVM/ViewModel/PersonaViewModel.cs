@@ -16,17 +16,18 @@ namespace DemoMVVM.ViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private Persona persona;
+        private EventHandler personaUpdated;
 
 
         public PersonaViewModel PersonaOriginal { get; set; }
 
 
-        public PersonaViewModel(PersonaViewModel p)
+        public PersonaViewModel(PersonaViewModel p, EventHandler personaUpdated)
         {
+            this.personaUpdated = personaUpdated;
             this.PersonaOriginal = p;
             this.Id = p.Id;
-            this.persona = p.persona;
+            //this.persona = p.persona;
             this.Nom = p.Nom;
             this.Sexe = p.Sexe;
             this.IsActiu = p.IsActiu;
@@ -36,7 +37,7 @@ namespace DemoMVVM.ViewModel
         public PersonaViewModel(Persona p)
         {
             this.Id = p.Id;
-            this.persona = p;
+            //this.persona = p;
             this.Nom = p.Nom;
             this.Sexe = p.Sexe;
             this.IsActiu = p.Actiu;
@@ -132,18 +133,38 @@ namespace DemoMVVM.ViewModel
 
         public void Save()
         {
-            PersonaOriginal.Nom = persona.Nom = this.Nom;
+            PersonaOriginal.Nom = this.Nom;
+            PersonaOriginal.IsActiu = this.IsActiu;
+            PersonaOriginal.Sexe = this.Sexe;
 
             int e;
             if(int.TryParse(this.Edat, out e))
             {
-                persona.Edat = e;
                 PersonaOriginal.Edat = this.Edat;
+                if (this.Id == -1) // INSERT
+                {
+                    Id = Persona.GetPersones().Max(x => x.Id) + 1;
+                    Persona.GetPersones().Add(
+                        new Persona(Id, Nom, Sexe, IsActiu, ImageURL, e)
+                        );
+
+         
+                    // OMG! Manuel, where are you ?
+                } else
+                { // UPDATE
+                   Persona p = Persona.GetPersones().Where(x => x.Id == Id).First();
+                    if (p != null) { 
+                        p.Nom = this.Nom;
+                        p.Sexe = this.Sexe;
+                        p.ImageURL = this.ImageURL;
+                        p.Actiu = this.IsActiu;
+                        p.Edat = e;
+                    }
+                }
+                // Llançar l'esdeveniment PersonaChanged
+                personaUpdated?.Invoke(this, new EventArgs());
             }
 
-            PersonaOriginal.IsActiu = persona.Actiu = this.IsActiu;
-            PersonaOriginal.Sexe    = persona.Sexe  = this.Sexe;
-            
             // Demanar a la UI que actualitzi l'estat del botó cancel i
             // del botó EsValida:
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("CancelVisibility"));

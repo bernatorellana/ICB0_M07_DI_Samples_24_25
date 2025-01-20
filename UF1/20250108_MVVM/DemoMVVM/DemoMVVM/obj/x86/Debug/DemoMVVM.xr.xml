@@ -53,6 +53,7 @@
     </RootType>
     <RootType FullName="DemoMVVM.View.UCEditPersona">
       <RootProperty Name="LaPersona" />
+      <RootEvent Name="PersonaUpdated" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Margin" />

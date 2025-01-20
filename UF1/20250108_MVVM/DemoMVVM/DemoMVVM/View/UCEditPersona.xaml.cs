@@ -24,6 +24,8 @@ namespace DemoMVVM.View
     public sealed partial class UCEditPersona : UserControl, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        public event EventHandler PersonaUpdated;
+
 
         public UCEditPersona()
         {
@@ -54,7 +56,7 @@ namespace DemoMVVM.View
             else
             if (PersonaEnEdicio == null || LaPersona.Id != PersonaEnEdicio.Id)
             {
-                PersonaEnEdicio = new PersonaViewModel(LaPersona);
+                PersonaEnEdicio = new PersonaViewModel(LaPersona, PersonaUpdated);
             }           
         }
 

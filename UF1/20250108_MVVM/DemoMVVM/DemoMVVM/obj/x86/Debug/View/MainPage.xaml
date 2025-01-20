@@ -22,11 +22,12 @@
             SelectedItem="{Binding PersonaSeleccionada,Mode=TwoWay}"
             ItemsSource="{Binding Persones}" Grid.Column="0"></controls:DataGrid>
 
-        <view:UCEditPersona  Grid.Row="0"  Grid.Column="1" 
+        <view:UCEditPersona x:ConnectionId='2'  Grid.Row="0"  Grid.Column="1" 
                              Grid.RowSpan="2"
-                             LaPersona="{Binding PersonaSeleccionada }"/>
+                             LaPersona="{Binding PersonaSeleccionada }"
+                                                                             />
 
-        <Button x:ConnectionId='2'  Grid.Row="1" Grid.Column="0" Margin="10"
+        <Button x:ConnectionId='3'  Grid.Row="1" Grid.Column="0" Margin="10"
                                                      
                  HorizontalAlignment="Center">New</Button>
     </Grid>
