@@ -476,6 +476,9 @@
         }
       },
       "Lib.Model/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36"
+        },
         "runtime": {
           "Lib.Model.dll": {}
         }

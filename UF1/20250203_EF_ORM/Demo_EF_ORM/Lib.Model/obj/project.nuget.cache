@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0mOEWX2smo5Lt3GG+/NFIjnJlCCuj59Wg7aBhkt8hal1ko/A0CVxLxrvLH66lJu5hMf7OC7XUyUvuqVHrPsnsw==",
+  "dgSpecHash": "7rmP+hvjuktNptH3Pl2r4UdqXjaN0CAlHgcZs/5Fo5T1y+DPQKZQtYJQGmjd/LQF9WMIePt4qnO2JllxVajXkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20250203_EF_ORM\\Demo_EF_ORM\\Lib.Model\\Lib.Model.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.36\\microsoft.entityframeworkcore.abstractions.6.0.36.nupkg.sha512"
+  ],
   "logs": []
 }

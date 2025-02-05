@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Demo_EF_ORM"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <Label>Empleats en general</Label>
+        <DataGrid x:Name="drgEmpleats"></DataGrid>
+        <Label>Empleats del departament</Label>
+        <DataGrid x:Name="drgEmpleatsInformatica"></DataGrid>
+    </StackPanel>
 </Window>

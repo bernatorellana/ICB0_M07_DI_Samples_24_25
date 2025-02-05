@@ -15,6 +15,7 @@ namespace Lib.EF.Service
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Empleat>().HasKey(e => e.Id);
+            modelBuilder.Entity<Departament>().HasIndex(e => e.Nom).IsUnique();
             modelBuilder.Entity<Departament>().HasKey(e => e.Id);
         }
 

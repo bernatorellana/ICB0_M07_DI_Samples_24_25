@@ -765,6 +765,9 @@
       "Lib.Model/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36"
+        },
         "compile": {
           "bin/placeholder/Lib.Model.dll": {}
         },

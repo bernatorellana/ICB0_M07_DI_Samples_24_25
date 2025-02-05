@@ -27,9 +27,13 @@ namespace Lib.EF.Migrations
 
                     b.Property<string>("Nom")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar(200)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Nom")
+                        .IsUnique();
 
                     b.ToTable("Departaments");
                 });
