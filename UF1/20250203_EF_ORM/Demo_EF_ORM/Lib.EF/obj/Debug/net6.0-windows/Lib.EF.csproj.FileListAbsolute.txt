@@ -1,0 +1,17 @@
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\bin\Debug\net6.0-windows\Lib.EF.deps.json
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\bin\Debug\net6.0-windows\Lib.EF.runtimeconfig.json
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\bin\Debug\net6.0-windows\Lib.EF.dll
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\bin\Debug\net6.0-windows\Lib.EF.pdb
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\bin\Debug\net6.0-windows\Lib.Model.dll
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\bin\Debug\net6.0-windows\Lib.Model.pdb
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.csproj.AssemblyReference.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.AssemblyInfoInputs.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.AssemblyInfo.cs
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.csproj.CoreCompileInputs.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.csproj.CopyComplete
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.dll
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\refint\Lib.EF.dll
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.pdb
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\Lib.EF.genruntimeconfig.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Lib.EF\obj\Debug\net6.0-windows\ref\Lib.EF.dll
