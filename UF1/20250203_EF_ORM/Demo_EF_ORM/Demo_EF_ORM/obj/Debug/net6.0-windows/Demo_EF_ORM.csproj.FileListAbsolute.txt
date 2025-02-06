@@ -64,3 +64,5 @@ C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\D
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Demo_EF_ORM\bin\Debug\net6.0-windows\Lib.Model.dll
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Demo_EF_ORM\bin\Debug\net6.0-windows\Lib.Model.pdb
 C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Demo_EF_ORM\bin\Debug\net6.0-windows\Lib.EF.pdb
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Demo_EF_ORM\obj\Debug\net6.0-windows\Demo_EF_ORM.csproj.Fody.CopyLocal.cache
+C:\Users\Usuari\Desktop\Mila\M07\ICB0_M07_DI_Samples_24_25\UF1\20250203_EF_ORM\Demo_EF_ORM\Demo_EF_ORM\obj\Debug\net6.0-windows\Demo_EF_ORM.csproj.Fody.RuntimeCopyLocal.cache

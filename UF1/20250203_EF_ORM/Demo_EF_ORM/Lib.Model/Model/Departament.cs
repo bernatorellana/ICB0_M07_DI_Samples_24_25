@@ -17,9 +17,18 @@ namespace Lib.Model.Model
 
         public ICollection<Empleat> Empleats { get; set;}
 
+        public override bool Equals(object? obj)
+        {
+            return obj is Departament departament &&
+                   Id == departament.Id;
+        }
+
         public override string? ToString()
         {
             return Nom;
         }
+
+
+
     }
 }

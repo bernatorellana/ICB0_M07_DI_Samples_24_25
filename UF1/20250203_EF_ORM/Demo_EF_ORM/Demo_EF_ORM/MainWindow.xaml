@@ -6,11 +6,38 @@
         xmlns:local="clr-namespace:Demo_EF_ORM"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
-        Title="MainWindow" Height="450" Width="800">
-    <StackPanel>
-        <Label>Empleats en general</Label>
-        <DataGrid x:Name="drgEmpleats"></DataGrid>
-        <Label>Empleats del departament</Label>
-        <DataGrid x:Name="drgEmpleatsInformatica"></DataGrid>
-    </StackPanel>
+        Title="MainWindow" Height="450" Width="800"
+        x:Name="window">
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <Label>Empleats en general</Label>
+            <DataGrid x:Name="drgEmpleats" SelectedItem="{Binding ElementName=window,Path=EmpleatSeleccionat, Mode=TwoWay}"></DataGrid>
+            <Label>Empleats del departament</Label>
+            <DataGrid x:Name="drgEmpleatsInformatica"></DataGrid>
+        </StackPanel>
+        <StackPanel  Grid.Column="1">
+
+
+
+
+
+            <TextBox x:Name="txtId" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Id}" IsReadOnly="True"></TextBox>
+            <TextBox x:Name="txtNom" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Nom, Mode=TwoWay}"></TextBox>
+            <TextBox x:Name="txtSalari" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Salari, Mode=TwoWay}"></TextBox>
+            <DatePicker x:Name="dtpNaix" SelectedDate="{Binding ElementName=window,Path=EmpleatSeleccionat.DataNaix, Mode=TwoWay}" ></DatePicker>
+            <ComboBox x:Name="cbDepts"
+                      DisplayMemberPath="Nom"
+                      ItemsSource="{Binding ElementName=window,Path=LlistaDepartaments}"
+                      SelectedItem="{Binding ElementName=window,Path=EmpleatSeleccionat.Dept, Mode=TwoWay}"></ComboBox>
+
+            <Button x:Name="btnSave" Click="btnSave_Click">Save</Button>
+            <Button x:Name="btnCancel" Click="btnCancel_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
 </Window>

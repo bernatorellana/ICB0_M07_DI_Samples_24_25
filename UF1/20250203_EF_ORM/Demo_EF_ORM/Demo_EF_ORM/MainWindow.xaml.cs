@@ -3,6 +3,7 @@ using Lib.Model.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,48 +22,64 @@ namespace Demo_EF_ORM
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public MainWindow()
         {
             InitializeComponent();
         }
 
+        public Empleat EmpleatSeleccionat { get; set; }
+
+        public List<Departament> LlistaDepartaments { get; set; }
+
+        ContextFactory fabrica = new ContextFactory();
+        EmpresaDBContext context;
+
         private void Window_Loaded(object sender, RoutedEventArgs ex)
+        {
+
+            context = fabrica.CreateDbContext();
+
+            LlistaDepartaments = context.Departaments.ToList();
+
+            drgEmpleats.ItemsSource = context.Empleats.ToList();
+
+            //inicialitzarDades(context);
+            //experimentsQueries();
+
+        }
+
+        private void experimentsQueries()
         {
             ContextFactory fabrica = new ContextFactory();
             var context = fabrica.CreateDbContext();
-            // vamos al "var"
-
-            //inicialitzarDades(context);
-
-            //List<Empleat> empleats = context.Empleats.ToList();
             List<Empleat> empleats = context.Empleats.Include(e => e.Dept).ToList();
 
             drgEmpleats.ItemsSource = empleats;
 
             //---------------------------------------------------------
-            Departament informatica = context.Departaments.Include(d=>d.Empleats).Single(d => d.Nom.Equals("Informatica"));
+            Departament informatica = context.Departaments.Include(d => d.Empleats).Single(d => d.Nom.Equals("Informatica"));
 
             drgEmpleatsInformatica.ItemsSource = informatica.Empleats;
 
-            List<Empleat> empleatsInformatica = context.Empleats.Where(e => e.Dept.Id == 10 ).ToList();
+            List<Empleat> empleatsInformatica = context.Empleats.Where(e => e.Dept.Id == 10).ToList();
             drgEmpleatsInformatica.ItemsSource = empleatsInformatica;
 
 
             List<Empleat> polPower = context.Empleats.FromSqlRaw("select * from empleats where Nom='Pol'").ToList();
 
             var resultat = (from e in context.Empleats
-                                           join
-                                                 d in context.Departaments on e.Dept equals d
-                                           where e.Nom.Equals("Pol")
-                                           select new {
-                                              e_nom = e.Nom,  
-                                              e_salari =  e.Salari,
-                                              d_nom = d.Nom
-                                                 }
+                            join
+                                  d in context.Departaments on e.Dept equals d
+                            where e.Nom.Equals("Pol")
+                            select new
+                            {
+                                e_nom = e.Nom,
+                                e_salari = e.Salari,
+                                d_nom = d.Nom
+                            }
                                             ).ToList();
-
         }
 
         private static void inicialitzarDades(EmpresaDBContext context)
@@ -84,6 +101,18 @@ namespace Demo_EF_ORM
             context.Empleats.Add(new Empleat { Nom = "Manuel", DataNaix = DateTime.Now, Salari = 5, Dept = dInfo });
 
             context.SaveChanges();
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            context.SaveChanges();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            context.ChangeTracker.Clear();
+            EmpleatSeleccionat = context.Empleats.Include(e=>e.Dept).Single(e=> e.Id==EmpleatSeleccionat.Id);
+            drgEmpleats.ItemsSource = context.Empleats.ToList();
         }
     }
 }

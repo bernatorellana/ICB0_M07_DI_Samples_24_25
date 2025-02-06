@@ -10,7 +10,8 @@
         "dependencies": {
           "Lib.EF": "1.0.0",
           "Lib.Model": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "6.0.36"
+          "Microsoft.EntityFrameworkCore.Design": "6.0.36",
+          "PropertyChanged.Fody": "4.1.0"
         },
         "runtime": {
           "Demo_EF_ORM.dll": {}
@@ -24,6 +25,7 @@
           }
         }
       },
+      "Fody/6.6.4": {},
       "Google.Protobuf/3.26.1": {
         "runtime": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -283,6 +285,11 @@
           }
         }
       },
+      "PropertyChanged.Fody/4.1.0": {
+        "dependencies": {
+          "Fody": "6.6.4"
+        }
+      },
       "System.Buffers/4.5.1": {},
       "System.Collections.Immutable/6.0.1": {
         "runtime": {
@@ -501,6 +508,13 @@
       "path": "bouncycastle.cryptography/2.3.1",
       "hashPath": "bouncycastle.cryptography.2.3.1.nupkg.sha512"
     },
+    "Fody/6.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vLZS+oa+ndUHYPlx/8n9bBTT3dHkCF0riml4paKq4D663+cZd47x1uagQo32D/gKFZ/sfmV1oqKaLmH0elxq4A==",
+      "path": "fody/6.6.4",
+      "hashPath": "fody.6.6.4.nupkg.sha512"
+    },
     "Google.Protobuf/3.26.1": {
       "type": "package",
       "serviceable": true,
@@ -661,6 +675,13 @@
       "sha512": "sha512-x1HxQJ7TnLETaiCSSsgm5tfF51mGbgdiYsthT0JvgEm0P8cI0ml75sGKPixXWXxL+aNfYfP8neCASEHL3HGVrw==",
       "path": "mysql.entityframeworkcore/6.0.33",
       "hashPath": "mysql.entityframeworkcore.6.0.33.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6v+f9cI8YjnZH2WBHuOqWEAo8DFFNGFIdU8xD3AsL6fhV6Y8oAmVWd7XKk49t8DpeUBwhR/X+97+6Epvek0Y3A==",
+      "path": "propertychanged.fody/4.1.0",
+      "hashPath": "propertychanged.fody.4.1.0.nupkg.sha512"
     },
     "System.Buffers/4.5.1": {
       "type": "package",
