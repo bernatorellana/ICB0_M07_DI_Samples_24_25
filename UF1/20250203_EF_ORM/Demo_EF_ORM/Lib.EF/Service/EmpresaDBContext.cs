@@ -18,7 +18,7 @@ namespace Lib.EF.Service
             modelBuilder.Entity<Empleat>().HasKey(e => e.Id);
             modelBuilder.Entity<Departament>().HasIndex(e => e.Nom).IsUnique();
             modelBuilder.Entity<Departament>().HasKey(e => e.Id);
-            modelBuilder.Entity<Projecte>().HasKey(e => e.Id); 
-
+            modelBuilder.Entity<Projecte>().HasKey(e => e.Id);
+        }
     }
 }
