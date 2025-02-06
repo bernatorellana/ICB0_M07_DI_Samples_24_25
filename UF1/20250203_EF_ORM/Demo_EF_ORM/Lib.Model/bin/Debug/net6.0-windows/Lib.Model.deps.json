@@ -8,18 +8,25 @@
     ".NETCoreApp,Version=v6.0": {
       "Lib.Model/1.0.0": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36"
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36",
+          "PropertyChanged.Fody": "4.1.0"
         },
         "runtime": {
           "Lib.Model.dll": {}
         }
       },
+      "Fody/6.6.4": {},
       "Microsoft.EntityFrameworkCore.Abstractions/6.0.36": {
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
             "assemblyVersion": "6.0.36.0",
             "fileVersion": "6.0.3624.51504"
           }
+        }
+      },
+      "PropertyChanged.Fody/4.1.0": {
+        "dependencies": {
+          "Fody": "6.6.4"
         }
       }
     }
@@ -30,12 +37,26 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Fody/6.6.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vLZS+oa+ndUHYPlx/8n9bBTT3dHkCF0riml4paKq4D663+cZd47x1uagQo32D/gKFZ/sfmV1oqKaLmH0elxq4A==",
+      "path": "fody/6.6.4",
+      "hashPath": "fody.6.6.4.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.Abstractions/6.0.36": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-nrR4lfe9izQK1eerKW/ECHuJV8xXtuvoj/APrwwOjX4+Ne2SMXBpetctPcYNVc3KyiKuUHJSLywWtsqoXE5ElA==",
       "path": "microsoft.entityframeworkcore.abstractions/6.0.36",
       "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.36.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/4.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6v+f9cI8YjnZH2WBHuOqWEAo8DFFNGFIdU8xD3AsL6fhV6Y8oAmVWd7XKk49t8DpeUBwhR/X+97+6Epvek0Y3A==",
+      "path": "propertychanged.fody/4.1.0",
+      "hashPath": "propertychanged.fody.4.1.0.nupkg.sha512"
     }
   }
 }

@@ -15,6 +15,12 @@
           }
         }
       },
+      "Fody/6.6.4": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Google.Protobuf/3.26.1": {
         "type": "package",
         "compile": {
@@ -423,6 +429,25 @@
           }
         }
       },
+      "PropertyChanged.Fody/4.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.6.4"
+        },
+        "compile": {
+          "lib/netstandard2.1/PropertyChanged.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/PropertyChanged.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/_._": {}
+        }
+      },
       "System.Buffers/4.5.1": {
         "type": "package",
         "compile": {
@@ -761,7 +786,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36"
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36",
+          "PropertyChanged.Fody": "4.1.0"
         },
         "compile": {
           "bin/placeholder/Lib.Model.dll": {}
@@ -794,6 +820,39 @@
         "lib/netstandard2.0/BouncyCastle.Cryptography.dll",
         "lib/netstandard2.0/BouncyCastle.Cryptography.xml",
         "packageIcon.png"
+      ]
+    },
+    "Fody/6.6.4": {
+      "sha512": "vLZS+oa+ndUHYPlx/8n9bBTT3dHkCF0riml4paKq4D663+cZd47x1uagQo32D/gKFZ/sfmV1oqKaLmH0elxq4A==",
+      "type": "package",
+      "path": "fody/6.6.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Fody.targets",
+        "fody.6.6.4.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb"
       ]
     },
     "Google.Protobuf/3.26.1": {
@@ -1298,6 +1357,27 @@
         "logo-mysql-170x115.png",
         "mysql.entityframeworkcore.6.0.33.nupkg.sha512",
         "mysql.entityframeworkcore.nuspec"
+      ]
+    },
+    "PropertyChanged.Fody/4.1.0": {
+      "sha512": "6v+f9cI8YjnZH2WBHuOqWEAo8DFFNGFIdU8xD3AsL6fhV6Y8oAmVWd7XKk49t8DpeUBwhR/X+97+6Epvek0Y3A==",
+      "type": "package",
+      "path": "propertychanged.fody/4.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/PropertyChanged.Fody.Analyzer.dll",
+        "build/PropertyChanged.Fody.props",
+        "lib/net40/PropertyChanged.dll",
+        "lib/net40/PropertyChanged.xml",
+        "lib/netstandard2.0/PropertyChanged.dll",
+        "lib/netstandard2.0/PropertyChanged.xml",
+        "lib/netstandard2.1/PropertyChanged.dll",
+        "lib/netstandard2.1/PropertyChanged.xml",
+        "propertychanged.fody.4.1.0.nupkg.sha512",
+        "propertychanged.fody.nuspec",
+        "weaver/PropertyChanged.Fody.dll",
+        "weaver/PropertyChanged.Fody.xcf"
       ]
     },
     "System.Buffers/4.5.1": {
@@ -2249,6 +2329,7 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "Lib.Model >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 6.0.36",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.36",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.36",
       "MySql.EntityFrameworkCore >= 6.0.33"
@@ -2304,6 +2385,10 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.36, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",

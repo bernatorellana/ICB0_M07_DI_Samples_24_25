@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7rmP+hvjuktNptH3Pl2r4UdqXjaN0CAlHgcZs/5Fo5T1y+DPQKZQtYJQGmjd/LQF9WMIePt4qnO2JllxVajXkA==",
+  "dgSpecHash": "KhOUnMw6T56wmkaJK0sjMCfD0iiZvKWpfyO6iI4c7YaawlF6WnR7Ki/yqoAbf9hDfwW7UEdZRBkf7pzP7b4Uvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuari\\Desktop\\Mila\\M07\\ICB0_M07_DI_Samples_24_25\\UF1\\20250203_EF_ORM\\Demo_EF_ORM\\Lib.Model\\Lib.Model.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.36\\microsoft.entityframeworkcore.abstractions.6.0.36.nupkg.sha512"
+    "C:\\Users\\Usuari\\.nuget\\packages\\fody\\6.6.4\\fody.6.6.4.nupkg.sha512",
+    "C:\\Users\\Usuari\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.36\\microsoft.entityframeworkcore.abstractions.6.0.36.nupkg.sha512",
+    "C:\\Users\\Usuari\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512"
   ],
   "logs": []
 }

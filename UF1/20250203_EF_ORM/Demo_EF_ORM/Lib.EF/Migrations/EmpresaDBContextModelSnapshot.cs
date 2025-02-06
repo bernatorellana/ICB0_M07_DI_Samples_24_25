@@ -19,6 +19,21 @@ namespace Lib.EF.Migrations
                 .HasAnnotation("ProductVersion", "6.0.36")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("EmpleatProjecte", b =>
+                {
+                    b.Property<int>("EmpleatsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProjectesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("EmpleatsId", "ProjectesId");
+
+                    b.HasIndex("ProjectesId");
+
+                    b.ToTable("EmpleatProjecte");
+                });
+
             modelBuilder.Entity("Lib.Model.Model.Departament", b =>
                 {
                     b.Property<int>("Id")
@@ -62,6 +77,36 @@ namespace Lib.EF.Migrations
                     b.HasIndex("DeptId");
 
                     b.ToTable("Empleats");
+                });
+
+            modelBuilder.Entity("Lib.Model.Model.Projecte", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Projectes");
+                });
+
+            modelBuilder.Entity("EmpleatProjecte", b =>
+                {
+                    b.HasOne("Lib.Model.Model.Empleat", null)
+                        .WithMany()
+                        .HasForeignKey("EmpleatsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Lib.Model.Model.Projecte", null)
+                        .WithMany()
+                        .HasForeignKey("ProjectesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Lib.Model.Model.Empleat", b =>

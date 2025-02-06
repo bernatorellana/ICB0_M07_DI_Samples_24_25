@@ -775,6 +775,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Lib.Model": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.36",
           "MySql.EntityFrameworkCore": "6.0.33"
         },
         "compile": {
@@ -791,7 +792,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36"
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.36",
+          "PropertyChanged.Fody": "4.1.0"
         },
         "compile": {
           "bin/placeholder/Lib.Model.dll": {}

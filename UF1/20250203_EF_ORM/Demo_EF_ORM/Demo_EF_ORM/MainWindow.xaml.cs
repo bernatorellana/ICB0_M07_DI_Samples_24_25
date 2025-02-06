@@ -43,7 +43,7 @@ namespace Demo_EF_ORM
 
             LlistaDepartaments = context.Departaments.ToList();
 
-            drgEmpleats.ItemsSource = context.Empleats.ToList();
+            drgEmpleats.ItemsSource = context.Empleats.Include(e =>e.Projectes).ThenInclude(p => p.Empleats).Include(e =>e.Dept).ToList();
 
             //inicialitzarDades(context);
             //experimentsQueries();
@@ -111,8 +111,21 @@ namespace Demo_EF_ORM
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             context.ChangeTracker.Clear();
-            EmpleatSeleccionat = context.Empleats.Include(e=>e.Dept).Single(e=> e.Id==EmpleatSeleccionat.Id);
-            drgEmpleats.ItemsSource = context.Empleats.ToList();
+
+            Empleat old = context.Empleats.Include(e => e.Dept).Single(e => e.Id == EmpleatSeleccionat.Id);
+
+            EmpleatSeleccionat.Nom = old.Nom;
+            EmpleatSeleccionat.Salari = old.Salari;
+            EmpleatSeleccionat.Dept = old.Dept; 
+
+         }
+
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            context.Empleats.Remove(EmpleatSeleccionat);
+            context.SaveChanges();
+            drgEmpleats.ItemsSource = context.Empleats.Include(e => e.Projectes).ThenInclude(p => p.Empleats).Include(e => e.Dept).ToList();
+
         }
     }
 }

@@ -19,7 +19,8 @@
             <Label>Empleats en general</Label>
             <DataGrid x:Name="drgEmpleats" SelectedItem="{Binding ElementName=window,Path=EmpleatSeleccionat, Mode=TwoWay}"></DataGrid>
             <Label>Empleats del departament</Label>
-            <DataGrid x:Name="drgEmpleatsInformatica"></DataGrid>
+            <DataGrid x:Name="drgEmpleatsInformatica">
+            </DataGrid>
         </StackPanel>
         <StackPanel  Grid.Column="1">
 
@@ -28,8 +29,8 @@
 
 
             <TextBox x:Name="txtId" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Id}" IsReadOnly="True"></TextBox>
-            <TextBox x:Name="txtNom" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Nom, Mode=TwoWay}"></TextBox>
-            <TextBox x:Name="txtSalari" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Salari, Mode=TwoWay}"></TextBox>
+            <TextBox x:Name="txtNom" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox x:Name="txtSalari" Text="{Binding ElementName=window,Path=EmpleatSeleccionat.Salari, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBox>
             <DatePicker x:Name="dtpNaix" SelectedDate="{Binding ElementName=window,Path=EmpleatSeleccionat.DataNaix, Mode=TwoWay}" ></DatePicker>
             <ComboBox x:Name="cbDepts"
                       DisplayMemberPath="Nom"
@@ -38,6 +39,30 @@
 
             <Button x:Name="btnSave" Click="btnSave_Click">Save</Button>
             <Button x:Name="btnCancel" Click="btnCancel_Click">Cancel</Button>
+            <Button x:Name="btnDelete" Click="btnDelete_Click">Delete</Button>
+
+            <DataGrid
+                AutoGenerateColumns="False"
+                ItemsSource="{Binding ElementName=window, Path=EmpleatSeleccionat.Projectes}">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id}"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Name}"></DataGridTextColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <ListBox 
+                                    DisplayMemberPath="Nom"
+                                    ItemsSource="{Binding Empleats}"></ListBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+        
         </StackPanel>
     </Grid>
 </Window>

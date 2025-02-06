@@ -11,13 +11,14 @@ namespace Lib.EF.Service
 
         public DbSet<Empleat> Empleats { get; set; }
         public DbSet<Departament> Departaments { get; set; }
+        public DbSet<Projecte> Projectes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Empleat>().HasKey(e => e.Id);
             modelBuilder.Entity<Departament>().HasIndex(e => e.Nom).IsUnique();
             modelBuilder.Entity<Departament>().HasKey(e => e.Id);
-        }
+            modelBuilder.Entity<Projecte>().HasKey(e => e.Id); 
 
     }
 }
